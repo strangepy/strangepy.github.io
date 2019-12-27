@@ -1,4 +1,8 @@
-Please find a list of services below. 
+---
+layout: page
+title: Services
+subtitle: Please find a list of services below.
+---
 
 # Web Performance
 Consulting on the performance of your website or web application. 
