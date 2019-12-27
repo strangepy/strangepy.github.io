@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Work With Me
-subtitle: Why you'd want to go on a date with me
+subtitle: How I can help you.
 ---
 Step 1. Schedule a complimentary, no-obligation consult. You can do that by sending me a [quick email](mailto:strangepy@gmail.com). (Contact form coming soon!)
 
