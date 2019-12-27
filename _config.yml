@@ -4,7 +4,7 @@
 title: strangePy
 
 # Short description of your site
-description: A blog for strangePy.
+description: Consulting for software development.
 
 # --- Local development options ---
 # If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
@@ -20,11 +20,12 @@ description: A blog for strangePy.
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  Blog: ""
+  Work With Me: "workwithme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
-  Author's home: "http://deanattali.com"
+  Services: "services"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
