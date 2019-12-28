@@ -2,6 +2,7 @@
 layout: post
 title: Common CSP Deployment Methods
 subtitle: The pros and cons of each. 
+tags: [security, web-performance]
 ---
 
 # Meta Tag
