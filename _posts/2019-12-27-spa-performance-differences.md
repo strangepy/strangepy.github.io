@@ -2,6 +2,7 @@
 layout: post
 title: How SPAs are changing the face of web performance
 subtitle: And why that may not be a bad thing. 
+tags: [web-performance, web-development]
 ---
 
 # What are SPAs? 
