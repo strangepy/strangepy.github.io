@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to protect yourself from credit card hacks
-subtitle: when a CSP fails. 
+subtitle: Because no one else cares as much about your data as you do.
 ---
 # What are some current threats to your credit card information?
 Attackers like Magecart have stolen millions of credit card numbers. These attacks primarily focus on hacking first- or third-party JavaScript and adding a call to send your data to another domain. These attacks are particularly dangerous because Magecart will buy domains that, at first glance, look like legitimate vendor domains, but are actually owned by Magecart. For example, when Newegg was breached, the false domain was neweggstats.com, which seems like it could be a first-party domain. 
