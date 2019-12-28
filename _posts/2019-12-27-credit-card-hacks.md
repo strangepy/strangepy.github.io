@@ -17,3 +17,5 @@ Unfortunately, not all websites will add a CSP to their site, or take steps to p
 
 # How can you limit the harm done by a credit card hack?
 Shopping online does come with some inherent risks of data loss. However, there are some companies that can help you mitigate the fallout if your information is stolen. Privacy, for example, allows you to create a new credit card for each online vendor. If the credit card number is used on any other website, the card will be declined and the purchase will be denied. You can also set a cap or maximum dollar amount for any single purchase on that vendor's website, so you can limit fraudulent purchases over a certain amount. These two features provide a strong defence against credit card data breaches, since the credit card number cannot be used anywhere else even if it is stolen. 
+
+<!-- Privacy.com -->
