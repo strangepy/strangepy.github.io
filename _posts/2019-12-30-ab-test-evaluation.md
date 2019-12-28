@@ -2,6 +2,7 @@
 layout: post
 title: Best practices for A/B testing
 subtitle: and pitfalls to avoid 
+tags: [web-performance, data-analysis]
 ---
 
 Include things to keep in mind during A/B testing
