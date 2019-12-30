@@ -3,7 +3,7 @@ layout: page
 title: Work With Me
 subtitle: How I can help you.
 ---
-Step 1. Schedule a complimentary, no-obligation consult. You can do that by sending me a [quick email](mailto:strangepy@gmail.com). (Contact form coming soon!)
+Step 1. Schedule a complimentary, no-obligation consult. You can do that by using the contact form below.
 
 Step 2. Watch your email for questions from me. Before we hop on the phone, I’d like to know a bit about you and what you’d like to get out of coaching with me.
 
@@ -26,7 +26,7 @@ Have questions? [Email me.](mailto:strangepy@gmail.com)
       <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
     </div>
   </div>
-  <input type="number" name="budget" class="form-control input-lg" placeholder="Estimated Budget (if applicable" title="Budget">
+  <input type="number" name="budget" class="form-control input-lg" placeholder="Estimated Budget (if applicable)" title="Budget">
   <input type="hidden" name="_subject" value="New submission from strangepy.com">
   <textarea type="text" name="content" class="form-control input-lg" placeholder="Please enter a brief description of how I can help!" title="Message" required="required" rows="3"></textarea>
   <input type="text" name="_gotcha" style="display:none">
