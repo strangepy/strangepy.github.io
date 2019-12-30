@@ -5,7 +5,7 @@ subtitle: to Host Your Next Website
 tags: 
 ---
 
-<img src="\assets\github-logo.jpg" alt="GitHub logo">
+<img src="\img\github-logo.jpg" alt="GitHub logo">
 
 After a few weeks of reading about the importance of having a personal website, I decided to take the leap and set up one of my own. I quickly realized that there are quite a few options for setting up your own website, and I needed to choose one. After reading through a few guides, I happened upon Jonathan McGlone's guide to creating and hosting a website using [GitHub Pages](http://jmcglone.com/guides/github-pages/). Even though the guide has not been updated in a while, it offered an excellent starting point. For those of you who do not know, GitHub allows each user to create and host a website free of charge, provided the source code for that website is in a public repository.
 
