@@ -1,9 +1,11 @@
 ---
 layout: post
-title: 11 Reasons You Should Consider GitHub Pages
-subtitle: to Host Your Next Website
+title: Is GitHub Pages Best for Your Website? 
+subtitle: 11 Reasons You Should Consider GitHub Pages to Host Your Website
 tags: web-development
 ---
+
+If you have ever considered setting up a personal website, you know the market is inundated with hosting options. If, like me, you want to show off your web development skills with a fast, free, and reliable hosting option, then GitHub Pages might be the perfect fit for you. 
 
 <img src="\img\github-logo.jpg" alt="GitHub logo">
 
