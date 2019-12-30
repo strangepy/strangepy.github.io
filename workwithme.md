@@ -13,17 +13,17 @@ Step 4. At the scheduled time of your consult, we’ll consult! We’ll use the 
 
 Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you the exact steps for getting started. If you decide not to work with me or if we aren’t a perfect fit, I’m happy to share other resources to help you get what you need.
 
-Have questions? [Email me.](mailto:strangepy@gmail.com)
+Have questions? Simply fill out the short form below or [email me directly.](mailto:strangepy@gmail.com)
 
-# Contact Form
+# Get in Touch
 
 <form action="https://formspree.io/strangepy@gmail.com" method="POST" class="form" id="contact-form">
   <div class="row">
     <div class="col-xs-6">
-      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" title="Email">
+      <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
     </div>
     <div class="col-xs-6">
-      <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
+      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" title="Email">
     </div>
   </div>
   <input type="number" name="budget" class="form-control input-lg" placeholder="Estimated Budget (if applicable)" title="Budget">
