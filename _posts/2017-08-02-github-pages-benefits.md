@@ -2,7 +2,7 @@
 layout: post
 title: 11 Reasons You Should Consider GitHub Pages
 subtitle: to Host Your Next Website
-tags: 
+tags: web-development
 ---
 
 <img src="\img\github-logo.jpg" alt="GitHub logo">
