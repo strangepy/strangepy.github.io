@@ -15,23 +15,23 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 
 Have questions? [Email me.](mailto:strangepy@gmail.com)
 
+# Contact Form
 
 <form action="https://formspree.io/strangepy@gmail.com" method="POST" class="form" id="contact-form">
-  <p>You can also send me a quick message using the form below:</p>
   <div class="row">
     <div class="col-xs-6">
-      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email" title="Email">
+      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" title="Email">
     </div>
     <div class="col-xs-6">
       <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
     </div>
   </div>
+  <input type="number" name="budget" class="form-control input-lg" placeholder="Estimated Budget (if applicable" title="Budget">
   <input type="hidden" name="_subject" value="New submission from strangepy.com">
-  <textarea type="text" name="content" class="form-control input-lg" placeholder="Message" title="Message" required="required" rows="3"></textarea>
+  <textarea type="text" name="content" class="form-control input-lg" placeholder="Please enter a brief description of how I can help!" title="Message" required="required" rows="3"></textarea>
   <input type="text" name="_gotcha" style="display:none">
   <input type="hidden" name="_next" value="?message=Your message was sent successfully, thanks!" />
-  
-  <div style="font-size: 12px; margin: -10px 0 10px;">Please do not use this form to send me full code samples or ask me to fix an app for free. Due to the volume of questions I receive I unfortuantely cannot offer free support.</div>
-  
   <button type="submit" class="btn btn-lg btn-primary">Submit</button>
 </form>
+
+<!--<div style="font-size: 12px;">Please do not use this form to send me full code samples or ask me to fix an app for free. Due to the volume of questions I receive I unfortuantely cannot offer free support.</div> -->
