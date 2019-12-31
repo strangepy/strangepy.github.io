@@ -1,7 +1,8 @@
 ---
+layout: post
 title: Analyzing Real User vs. Synthetic Data
 subtitle: The advantages and disadvantages of each
-tags: data-analysis, web-performance
+tags: [data-analysis, web-performance]
 ---
 
 When measuring the performance of your website, your options are to use real user (humans who are interacting with the site naturally) or synthetic (automated testing with the sole purpose of observing your site) data. The data sets produced by these users are quite different, and this post explains the advantages and disadvantages of each approach. 
