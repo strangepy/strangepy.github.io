@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyzing Real User vs. Synthetic Data
+title: Analyzing Real User vs Synthetic Data
 subtitle: The advantages and disadvantages of each
 tags: [data-analysis, web-performance]
 ---
