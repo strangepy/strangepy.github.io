@@ -49,6 +49,7 @@ Synthetic users are essentially automated computer systems with instructions to 
 - Limited number of locations available. Typically these locations are in the same area as popular servers (particularly with Amazon) which can lead to misleadingly fast performance metrics. 
 - Requires manual intervention to add in new URLs (such as the launch of a new product or new site) or modify existing URLs (such as site restructuring) and as such test may not be running against the most relevant pages at all times. 
 - If the host of the synthetic agent goes offline, all synthetic data will cease. 
+- For low-traffic sites, too much synthetic testing can be overwhelming for the infrastructure and cause problems. This is an edge case, but keep it in mind if you are running synthetic measurements against another company's website. 
 
 # The Bottom Line
 You should use a combination of real user and synthetic data when analyzing your website's performance. Real users provide an excellent guide for the real-world performance of your site, while synthetics offer targeted, clean testing of a single page or small number of pages. 
