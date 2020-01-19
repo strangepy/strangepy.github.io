@@ -2,6 +2,7 @@
 layout: post
 title: How SPAs are changing the face of web performance
 subtitle: And why that may not be a bad thing. 
+image: /img/chris-lawton-5IHz5WhosQE-unsplash.jpg
 tags: [web-performance, web-development]
 ---
 
