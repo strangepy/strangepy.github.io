@@ -2,6 +2,7 @@
 layout: post
 title: Should you switch to a SPA or PWA?
 subtitle: Potential risks and benefits of each structure.
+image: /img/karl-pawlowicz-av6mpWu20_4-unsplash.jpg
 tags: [web-performance, web-development]
 ---
 
