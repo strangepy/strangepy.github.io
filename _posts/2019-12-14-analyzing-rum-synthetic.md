@@ -2,6 +2,7 @@
 layout: post
 title: Analyzing Real User vs Synthetic Data
 subtitle: The advantages and disadvantages of each
+image: /img/franck-v-JjGXjESMxOY-unsplash.jpg
 tags: data-analysis
 ---
 
