@@ -2,6 +2,7 @@
 layout: post
 title: Common CSP Deployment Methods
 subtitle: The pros and cons of each. 
+image: /img/john-salvino-bqGBbLq_yfc-unsplash.jpg
 tags: [security, web-performance]
 ---
 
