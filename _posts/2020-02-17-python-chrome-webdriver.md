@@ -2,6 +2,7 @@
 layout: post
 title: Getting Started with Selenium Testing in Python
 subtitle: in ten minutes or less 
+image: /img/caspar-camille-rubin-fPkvU7RDmCo-unsplash.jpg
 tags: python
 --- 
 Automated browser testing is incredibly useful. Once you learn how to use it in one project, it is easy to apply to other projects and automate all kinds of tasks. 
