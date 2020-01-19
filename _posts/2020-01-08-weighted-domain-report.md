@@ -2,6 +2,7 @@
 layout: post
 title: Building a Waterfall Graph
 subtitle: using Python API requests
+image: /img/luke-chesser-JKUTrJ4vK00-unsplash.jpg
 tags: [python, web-performance]
 --- 
 A couple weeks ago, a client approached me and asked about the possibility of building a custom report. Essentially, this report would use a waterfall graph of file load times and output a weighted list of domains to focus on in order to improve web performance. If you don't quite understand what that means, no worries! Everything will be explained below! 
