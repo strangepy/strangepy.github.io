@@ -2,6 +2,7 @@
 layout: post
 title: How to protect yourself from credit card hacks
 subtitle: Because no one else cares as much about your data as you do.
+image: /img/rupixen-com-Q59HmzK38eQ-unsplash.jpg
 tags: [security, web-development]
 ---
 # What are some current threats to your credit card information?
