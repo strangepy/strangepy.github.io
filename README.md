@@ -3,7 +3,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/daattali/20)
 [![Gem Version](https://badge.fury.io/rb/beautiful-jekyll-theme.svg)](https://badge.fury.io/rb/beautiful-jekyll-theme)
 -->
-> *Copyright 2019 [strangePy](https://strangepy.github.io)*
+> *Copyright 2019-2020 [strangePy](https://strangepy.github.io)*
 
 Welcome to the website files for strangePy consulting and development. [Check out the live site here.](https://strangepy.github.io) This site was built using GitHub pages with the wonderful [Beautiful Jekyll theme.](https://deanattali.com/beautiful-jekyll)
 
