@@ -2,6 +2,7 @@
 layout: post
 title: Best practices for A/B testing
 subtitle: and pitfalls to avoid 
+image: /img/john-mark-arnold-WItJTJsW97w-unsplash.jpg
 tags: [web-performance, data-analysis]
 ---
 
