@@ -8,6 +8,12 @@ This page essentially assembles some examples of projects that I have worked on 
 # Languages 
 
 ## C 
+My first introduction to writing code was in C as part of a Computational Physics course. During my entire college studies, there were prompts to solve physics problems computationally, so many of my first coding projects involved: 
+- Plotting the interaction of light near a black hole 
+- Writing functions for Kepler's Laws of Planetary Motion 
+- Analyzing and estimating error inherent in computational methods, such as roundoff error 
+- Removing dimensions from equations before writing any code
+All of this code was written using PuTTY to SSH into a Unix server to open pico (or later emacs) from the command line, close pico, and run the .c file directly from the command line. 
 
 ## JavaScript 
 web testing, custom functions for an analytics service 
