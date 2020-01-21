@@ -60,7 +60,7 @@ Sometimes, Excel is the tool of choice for a particular client or task. I can us
 * Calculating pricing for an entire Saas platform
 
 ## Selenium
-Nearly all of my experience with selenium is in Python or in software systems built to run a specific set of selenium commands. Selenium is essential for automated web testing, and I have a few years of experience working in it. 
+Nearly all of my experience with selenium is in Python or in software systems built to run a specific set of selenium commands. Selenium is essential for automated web testing, and I have multiple years of experience working in it. I have spent hundreds of hours writing and troubleshooting selenium scripts. 
 
 ## Katalon
 I have used both the Katalon Chrome extension and the full Katalon Studio. One client only supported the Katalon Chrome extension, so I have a lot of experience working with it. I have used Katalon Studio for a few projects so far, and it has so much more functionality than the Chrome extension. 
