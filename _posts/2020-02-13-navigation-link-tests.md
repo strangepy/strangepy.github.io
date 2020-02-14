@@ -1,0 +1,11 @@
+---
+title: Checking Navigation Link Uptime
+subtitle: using JavaScript 
+tags: [javascript]
+---
+
+Sometimes we get requests from clients with a lot of constraints, and we have to do the best with the constraints given. This was one such project. Essentially, the customer wanted to crawl through all of their category and subcategory links to check the response code of each one. Typically customers would create one base page measurement for each link, but they needed the list of subcategories to be generated dynamically. They could also use a spider or crawling software, but they wanted this to be run by their third party synthetic software, which limited our options substantially. 
+
+The solution ended up involving mapping each category page to each minute of the hour and then running a test every minute to open that category page and check all the subcategory links on it. This custom software only supported JavaScript, so we could not click on each subcategory link (when you click on a link in JavaScript the entire page reloads and thus ceases any JavaScript execution). Since the client was only interested in the HTTP response code of each link, we were able to instead make an XHR request for each subcategory link. The client's requirements included (1) failing the synthetic measurement when any links responded with a HTTP code greater than 400, (2) printing the number of failures and the URL of each failed link to the page for screenshot, and (3) generating a console log output with the response code and URL of each subcategory link. 
+
+I fully recognize that this is not an ideal solution or even a great solution, but it met the clients requirements and was up and running within an hour. Essentially someone on the client's business team needed to be verifying all of these links every 10 minutes and generating an alert whenever it failed, so we needed a fast and functional solution. This was an acceptable work-around that integrated with their third-party solution for the next few months until that third party provider can add a crawling and scraping feature. So this project was much shorter and quicker than usual, but it helped the client substantially and fit within their restrictions. 
