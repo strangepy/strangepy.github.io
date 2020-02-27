@@ -10,13 +10,13 @@ Today, I received a request to dynamically check the HTTP response code of every
 However, the provider's multi-step synthetic scripts stop the test completely when there is one failure. So if the second sub-category link returns a 404 code, then the entire script will stop and not test the remaining sub-categories. Crawling through each sub-category link was not an option with this configuration. So, I had to think outside of the box to fulfill their requirements. 
 
 Since the customer is only interested in the HTTP response code, the request was substantially simpler than I originally thought. For a concept test, I started with testing all of the sub-category links for only one category page. The customer wanted a high-level pass/fail response for each category, and then detailed failure messages for each sub-category link in the console log. So, I wrote a small snippet of JavaScript to pull all of the sub-category links into a list, and then asynchronously request each URL through an XHR request for the response code. This snippet also included a separate section to print a custom message to the page that had the number of failures and a particular CSS class if there were any failures. The synthetic script opened the category URL, ran the JavaScript snippet, and then checked for that particular CSS class to pass/fail the script as a whole. 
-`
+```
 // Pull list of sub-category links 
 
 // Get the HTTP code for each link 
 
 // Print a custom message to the page 
-`
+```
 
 Once that concept test was up and running successfully in their third-party software, I was able to wrap up the project by expanding to other category pages. Essentially, this client occassionally changed their category URLs or added a new category (such as a holiday or Mother's Day category) so those needed to be tested dynamically as well. I had already built a piece to test all of the sub-category links, but as mentioned before the test would stop completely if a link on one of those category pages failed. So instead I added a separate JavaScript snippet to map each category link to a minute of the hour, and then the test would run once per minute constantly. There would be slightly fewer tests per hour run on a couple of the category links, but the client's requirements included testing each category page every 10 minutes, so this was sufficient. 
 
