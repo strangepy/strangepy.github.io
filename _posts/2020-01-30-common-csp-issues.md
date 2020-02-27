@@ -1,6 +1,7 @@
 --- 
 title: Common issues with a CSP manager 
 subtitle: and effective remedies 
+image: /img/the-framed-bear-8wewP5tpt-4-unsplash.jpg
 tags: [web-performance]
 --- 
 
