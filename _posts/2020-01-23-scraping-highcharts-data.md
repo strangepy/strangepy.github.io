@@ -1,6 +1,7 @@
 --- 
 title: How to scrape Highcharts data from a webpage 
 subtitle: using JavaScript and the Highcharts API
+image: /img/lukasz-szmigiel-jgFBXnK4F_g-unsplash.jpg
 tags: [javascript, python, web-scraping]
 --- 
 
