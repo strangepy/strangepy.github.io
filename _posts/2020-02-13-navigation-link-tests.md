@@ -1,6 +1,7 @@
 ---
 title: Checking Navigation Link Uptime
 subtitle: using JavaScript 
+image: /img/james-lee-c0HH4m75jYA-unsplash.jpg
 tags: [javascript]
 ---
 
