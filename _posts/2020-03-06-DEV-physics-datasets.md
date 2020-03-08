@@ -15,6 +15,9 @@ subtitle: and links
 
 [CERN Open Data Visualize CMS](http://opendata.cern.ch/visualise/events/cms)
 
+## Time Series
+[Tutorial on Decomposition](https://www.machinelearningplus.com/time-series/time-series-analysis-python/)
+
 
 ## Astronomy
 [Georgia Tech Astronomy Data Sets](http://libguides.gatech.edu/physics/datasets)
