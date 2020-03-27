@@ -11,6 +11,11 @@ layout: null
     {% for post in site.posts limit:20 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
+          <image>
+            <url>{{ post.image | absolute_url }}</url>
+            <title>strangePy</title>
+            <link>{{ post.url | absolute_url }}</link>
+          </image>
         <description>
           {% if post.subtitle %}{{ post.subtitle | xml_escape }} - {% endif %}
           {{ post.content | strip_html | xml_escape | truncatewords: 50 }}
