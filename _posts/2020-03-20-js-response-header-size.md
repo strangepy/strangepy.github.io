@@ -1,7 +1,7 @@
 ---
 title: How to Monitor HTTP Response Header Size
 subtitle: Using only JavaScript and Selenium
-img: /img/vincent-ghilione-b3s2P1VHVcU-unsplash.jpg
+image: /img/vincent-ghilione-b3s2P1VHVcU-unsplash.jpg
 tags: [javascript, security]
 ---
 
