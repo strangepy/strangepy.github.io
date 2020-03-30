@@ -6,7 +6,7 @@ permalink: /site-index.html
 
 <h2>Helpful Links</h2>
   <ul>
-    {% for page in site.pages unless page.url contains "/page" %}
+    {% for page in site.pages unless page.url contains 'page' %}
       {% if page.type == "info" %}
         <li>
          <a href="{{ page.url }}">{{ page.title }}</a>
@@ -15,7 +15,7 @@ permalink: /site-index.html
     {% endfor %}
   </ul> 
 
-<h2>Posts</h2>
+<h2>Top Posts</h2>
   <ul>
     {% for post in site.posts limit:200 %}
       <li>
