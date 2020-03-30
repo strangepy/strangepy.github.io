@@ -2,6 +2,7 @@
 layout: page
 title: Services
 subtitle: Data Analysis / Web Performance / Automation
+type: info
 ---
 
 My most commonly-requested services are listed below. I love working on new, challenging projects, so if you are interested in something not listed here, then please reach out to me and I would love to help (or find someone who can)!
