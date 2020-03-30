@@ -4,33 +4,25 @@ title: Site Index
 permalink: /site-index.html
 ---
 
-<h2>Pages</h2>
+<h2>Helpful Links</h2>
   <ul>
     {% for page in site.pages %}
-      <li>
-        <a href="{{ page.url }}">{{ page.title }}</a>
-      </li>
+      {% if page.type == "info" %}
+        <li>
+         <a href="{{ page.url }}">{{ page.title }}</a>
+        </li>
+      {% endif %}
     {% endfor %}
-</ul> 
+  </ul> 
 
 <h2>Posts</h2>
   <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts limit:200 %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
     {% endfor %}
-</ul> 
+  </ul> 
 
 
 
-<h2>Info</h2>
-  <ul>
-    {% for page in site.pages %}
-    {% if page.type == "info" %}
-      <li>
-        <a href="{{ page.url }}">{{ page.title }}</a>
-      </li>
-    {% endif %}
-    {% endfor %}
-</ul> 
