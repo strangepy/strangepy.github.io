@@ -6,7 +6,7 @@ image: /img/franck-v-JjGXjESMxOY-unsplash.jpg
 tags: data-analysis
 ---
 
-When measuring the performance of your website, your options are to observe load times for real users (humans who interact with the site naturally) or synthetic (automated testing with the sole purpose of observing your site) users. The data sets produced by these users are quite different, and tit is important to understand the advantages and disadvantages of each approach. 
+When measuring the performance of your website, your options are to observe load times for real users (humans who interact with your site naturally) or synthetic users (automated bots that observe your site in a defined manner). The data sets produced by these  two user types are quite different, and it is important to understand the advantages and disadvantages of each approach. 
 
 # Real User Data
 As mentioned before, "real users" are the regular people who browse your site every day and interact with it naturally. These users use a variety of device types, browsers, and operating systems and are located anywhere in the world.
