@@ -1,7 +1,8 @@
 ---
 layout: page
 title: Work With Me
-subtitle: How I can help you.
+subtitle: and how I can help you.
+type: info
 ---
 Step 1. Schedule a complimentary, no-obligation consult. You can do that by using the contact form below.
 
