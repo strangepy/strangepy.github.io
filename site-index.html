@@ -21,3 +21,16 @@ permalink: /site-index.html
       </li>
     {% endfor %}
 </ul> 
+
+
+
+<h2>Info</h2>
+  <ul>
+    {% for page in site.pages %}
+    {% if page.title contains 'service' %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endif %}
+    {% endfor %}
+</ul> 
