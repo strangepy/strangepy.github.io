@@ -27,7 +27,7 @@ permalink: /site-index.html
 <h2>Info</h2>
   <ul>
     {% for page in site.pages %}
-    {% if page.title contains 'service' %}
+    {% if page.type == "info" %}
       <li>
         <a href="{{ page.url }}">{{ page.title }}</a>
       </li>
