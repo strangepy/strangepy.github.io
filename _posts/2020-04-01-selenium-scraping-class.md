@@ -1,7 +1,7 @@
 ---
 title: How to Create a Selenium Class
 subtitle: to automatically evaluate a list of URLs 
-img: /img/mstile-144x144.png
+image: /img/mstile-144x144.png
 tags: [python, web-scraping]
 ---
 
