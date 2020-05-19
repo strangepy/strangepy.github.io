@@ -7,7 +7,7 @@ tags: [web-performance, javascript]
 
 Daily deals pages are one of the most important pages of your website. But they change every single day, or sometimes multiple times per day. How can you check that each one of these products is up and running without manually creating a new monitor each day? 
 
-# Setup 
+## Setup 
 For today's task, you will need access to a synthetic monitoring solution that supports evaluating JavaScript on the page. Ideally, this will be Selenium or Katalon Studio. My examples will be based on Selenium, but with minor changes you should be able to port this code over to any other synthetic monitoring software. 
 
 ## The Problem 
@@ -22,7 +22,36 @@ Automatically configuring the single page monitors is a big step in the right di
 
 Automatically pulling the URLs for each product on the deals page is another great approach. This will monitor the deals page itself, as well as each individual product. For bonus points, this script will also only include in stock products, since monitoring an out of stock product is pointless. This approach involves mapping up each product with a specific minute of the hour, so it will consistently hit one product each minute for the entire hour. If there are greater than 60 products offered on your deals page, then you can add additional logic for multiple synthetic locations as well. 
 
+## The Solution
+
 To get started, I searched online for "daily deals" and the top result was [Best Buy's Deal of the Day page for the Electronics category](https://www.bestbuy.com/site/misc/deal-of-the-day/pcmcat248000050016.c). This page will work well for this example, but you can use any deals page. 
 
-## Writing the JavaScript 
-Essentially the hardest part of this synthetic monitor is writing the JavaScript function to map each minute to a different product. 
+### Evaluating the Page
+
+First, you should open up this page in your browser. There are a few things to look for on the page. At the top of the page, there is a featured deal of the day. 
+
+![Featured Deal of the Day](img/dealoftheday1.png)
+
+If you scroll down a bit you can see there are quite a few "bonus deals" of the day that are being offered. There are also some "Shop Now" advertisement buttons that we do not want to include in this test, since those are not special deals of the day. 
+
+![Bonus Deals and Shop Now](img/dealoftheday2.png)
+
+Scrolling down a bit further, we can see that there are even a few deals that have sold out. Since there are only a few hours left before these deals expire, this is entirely normal. As you get closer to the end of the day, some products should be sold out. So, we also want to exclude expired deals from the test. 
+
+![Sold Out Deals](img/dealoftheday3.png)
+
+Remember to check for each of these items on your daily deals page. This will be important for the next step where we actually start writing a bit of code. 
+
+### Writing the JavaScript 
+Essentially the hardest part of this synthetic monitor is writing the JavaScript function to map each minute to a different product. But first, we need to pull the list of product URLs from the page, while excluding sold out products and products that are not part of the daily deal promotion. 
+
+For our test page, initially we can start out with a selector for all Add to Cart buttons. 
+
+```document.querySelectorAll('button.add-to-cart-button')```
+
+There are 14 buttons returned by this query selector. If we take a closer look at each one, the sold out button is included in the list. This seems counterintuitive, since a disabled button displaying "sold out" is not typically an add to cart button. The solution for this site is simple, we need to add a check to ensure that the add to cart button is not disabled. 
+
+```document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)')```
+
+## Future Enhancements
+As mentioned in the post above, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
