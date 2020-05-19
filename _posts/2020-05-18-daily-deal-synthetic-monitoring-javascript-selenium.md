@@ -53,5 +53,27 @@ There are 14 buttons returned by this query selector. If we take a closer look a
 
 ```document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)')```
 
+Now we can throw those buttons into a variable. Since we do not want to click on the Add to Cart button itself, we can use one element to test pulling the href for that product. 
+
+```
+var addToCartButtons = document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)');
+// for testing only
+addToCartButtons[12].closest('div.row').querySelector('[id*=list-offer-header] > a');
+```
+
+Now that we have the path to the href for each product with a valid Add to Cart button, we can push those into a separate array with a forEach loop. 
+
+```
+// empty array to receive links 
+var productLinks = [];
+// push each link into the array 
+addToCartButtons.forEach(element => productLinks.push(element.closest('div.row').querySelector('div.info-block > h3 > a')))
+```
+
+Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. 
+
+### Putting it into a Monitor
+Adding this into a monitor is surprisingly easy. You need an open command to open the daily deals link, some validation to verify that page has loaded, and then a runScript command to evaluate the JavaScript snippet we wrote above. At the end of the script, you can add any kind of validation to verify that the product page has loaded properly. 
+
 ## Future Enhancements
 As mentioned in the post above, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
