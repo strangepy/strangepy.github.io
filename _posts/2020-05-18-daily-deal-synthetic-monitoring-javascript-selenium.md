@@ -72,6 +72,8 @@ addToCartButtons.forEach(element => productLinks.push(element.closest('div.row')
 
 Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. 
 
+Array(60).fill(productLinks).flat().slice(0,60)
+
 ### Putting it into a Monitor
 Adding this into a monitor is surprisingly easy. You need an open command to open the daily deals link, some validation to verify that page has loaded, and then a runScript command to evaluate the JavaScript snippet we wrote above. At the end of the script, you can add any kind of validation to verify that the product page has loaded properly. 
 
