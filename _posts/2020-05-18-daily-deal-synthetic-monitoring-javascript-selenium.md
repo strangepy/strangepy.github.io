@@ -1,6 +1,6 @@
 ---
 title: How to Automatically Monitor Daily Deals Pages
-subtitle: without manually creating 154 monitors
+subtitle: without manually creating a hundred monitors
 image: /img/justin-lim-JKjBsuKpatU-unsplash.jpg
 tags: [web-performance, javascript]
 ---
@@ -70,12 +70,36 @@ var productLinks = [];
 addToCartButtons.forEach(element => productLinks.push(element.closest('div.row').querySelector('div.info-block > h3 > a')))
 `
 
-Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. 
+Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. For this part, we have assumed that there are up to 60 products on the daily deals page, so we want to expand the array above to a length of sixty. Keep in mind that it would be possible for the daily deal page to only have a single product, so in this case we want to repeat the productLinks array 60 times, flatten it, and then slice out the first 60 items. If you are scaling up your script to allow for more than 60 products, then simply replace "60" with the desired number and modify the click() function in the next step. 
 
-Array(60).fill(productLinks).flat().slice(0,60)
+`
+// expand the productLinks array into an array of 60 elements 
+var expandedProductLinks = Array(60).fill(productLinks).flat().slice(0,60);
+// if your page can have more than 60 products, fill your number in place of "length" below
+var expandedProductLinks = Array(length).fill(productLinks).flat().slice(0,length);
+`
+
+From this point, the only bit of JavaScript left is to grab the current minute and actually click on one of the products! 
+
+`
+// grab the current time 
+var currentTime = new Date(); 
+// click on the appropriate product for the current minute
+expandedProductLinks[currentTime.getMinutes()].click();
+`
+The hard part is now done! We will strip out the whitespace and put it into a runScript or executeScript command, but the core script logic is complete. 
 
 ### Putting it into a Monitor
 Adding this into a monitor is surprisingly easy. You need an open command to open the daily deals link, some validation to verify that page has loaded, and then a runScript command to evaluate the JavaScript snippet we wrote above. At the end of the script, you can add any kind of validation to verify that the product page has loaded properly. 
 
-## Future Enhancements
-As mentioned in the post above, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
+## Closing Thoughts
+As I mentioned above, you should tailor the HTML selectors to your individual site. Keep in mind that Best Buy may not have the same site structure long-term, so the example above will not work forever. But, it should serve as an excellent starting point and an example to get your own monitoring script up and running. If you run into any issues or would like help, please let me know! 
+
+### Future Enhancements
+For some future enhancements, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
+
+### Full JavaScript Code 
+` code block `
+
+### Full Python Code 
+` code block `
