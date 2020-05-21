@@ -47,7 +47,9 @@ Essentially the hardest part of this synthetic monitor is writing the JavaScript
 
 For our test page, initially we can start out with a selector for all Add to Cart buttons. 
 
-`document.querySelectorAll('button.add-to-cart-button')`
+```JavaScript
+document.querySelectorAll('button.add-to-cart-button')
+```
 
 There are 14 buttons returned by this query selector. If we take a closer look at each one, the sold out button is included in the list. This seems counterintuitive, since a disabled button displaying "sold out" is not typically an add to cart button. The solution for this site is simple, we need to add a check to ensure that the add to cart button is not disabled. 
 
@@ -81,12 +83,13 @@ var expandedProductLinks = Array(length).fill(productLinks).flat().slice(0,lengt
 
 From this point, the only bit of JavaScript left is to grab the current minute and actually click on one of the products! 
 
-`
+```JavaScript
 // grab the current time 
 var currentTime = new Date(); 
 // click on the appropriate product for the current minute
 expandedProductLinks[currentTime.getMinutes()].click();
-`
+```
+
 The hard part is now done! We will strip out the whitespace and put it into a runScript or executeScript command, but the core script logic is complete. 
 
 ### Putting it into a Monitor
