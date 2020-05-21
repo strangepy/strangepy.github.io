@@ -4,7 +4,6 @@ subtitle: using only JavaScript
 image: /img/mstile-144x144.png
 tags: [web-performance, javascript]
 ---
-{{ post.excerpt | strip_html | xml_escape | truncatewords: site.excerpt_length }}
 
 Google PageSpeed Insights is a wonderful tool for improving your website. However, it can also be difficult to tell which improvements you should focus on first. For mobile devices, deferring offscreen images can improve page speed significantly. But keeping track of the user's scroll position can be costly, and you do not want to trade download time for processing time. This post will explore an option using pure JavaScript that does not rely on scroll position. 
 
