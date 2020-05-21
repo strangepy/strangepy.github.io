@@ -100,6 +100,66 @@ The hard part is now done! We will strip out the whitespace and put it into a ru
 ### Putting it into a Monitor
 Adding this into a monitor is surprisingly easy. You need an open command to open the daily deals link, some validation to verify that page has loaded, and then a runScript command to evaluate the JavaScript snippet we wrote above. At the end of the script, you can add any kind of validation to verify that the product page has loaded properly. 
 
+Note: Be sure to save the full JavaScript code above into a file so that it can be loaded in as part of the Python script. 
+
+As mentioned in the setup step, please ensure that the selenium bindings for Python (as well as Python 3) are installed on your local machine. [The latest version of Python can be installed using the downloads page here](https://www.python.org/downloads/). For selenium, I put together a great guide to [get set up with selenium in 10 minutes or less here](https://www.strangepy.com/2020-02-06-python-chrome-webdriver/). You can use Chromium or Firefox for your testing, but the example below uses Firefox. 
+
+First off, you want to make sure to grab all of the necessary dependencies. The `os` package is not strictly necessary, but it does help with file path logic so it is included here for convenience. 
+
+```Python
+# dependencies 
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+import os
+```
+
+Next, we'll set up two variables. One holds the path to the JavaScript file, and the second one reads in that JavaScript file and stores the code for later use. 
+
+```Python
+# vars 
+js_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'dealOfTheDayProduct.js')
+click_product_script = open(js_path, 'r').read()
+```
+
+You can configure any browser options that you want here. It can be really helpful to configure a custom user-agent string and any other browser options, but here we have only added the headless flag. If you want to watch the program run or turn off headless mode for debugging, simply comment out or delete that line. 
+
+```Python
+# optional browser config 
+options = Options()
+options.add_argument("--headless")
+```
+
+The next part is essentially "step one" of the synthetic monitor. These two lines actually launch the browser and then tells the browser to navigate to the deal of the day page. 
+
+```Python
+# start browser and get to daily deal page
+browser = webdriver.Firefox(options=options)
+browser.get('https://www.bestbuy.com/site/misc/deal-of-the-day/pcmcat248000050016.c')
+```
+
+For "step two" of this script, you want to actually execute the JavaScript code. When this `execute_script` command is finished running, the browser will have navigated to one of the given product links. 
+
+```Python
+# run JS to open product
+browser.execute_script(click_product_script)
+```
+
+Under step two of the script, you want to include any logic to validate that the product page has loaded properly. There are quite a few options here. Some of the most common validation is ensuring the product image exists, verifying "product unavailable" text is not present, and validating the Add to Cart button is enabled. This example only includes checking for the product image, but I would recommend adding some additional validation to ensure you get as much valuable data as possible from this script. 
+
+```Python
+# validate product page 
+browser.find_element_by_css_selector('img.primary-image')
+```
+
+With all of the validation for that product out of the way, it is time to close the browser down. It is easy to forget this step, but you can end up with hundreds of browser instances open and running on your machine if you forget to exit. 
+
+```Python
+# close processes
+browser.quit()
+```
+
+The Python code above is a simplified example to test out the process and JavaScript code on your local machine. Talk with your synthetics provider to ensure they support selenium-based browser testing and evaluating JavaScript code within a synthtic monitor first. This kind of testing is common, so the question is typically "How can I set this up within their software?" rather than "Can it be done?".
+
 ## Closing Thoughts
 As I mentioned above, you should tailor the HTML selectors to your individual site. Keep in mind that Best Buy may not have the same site structure long-term, so the example above will not work forever. But, it should serve as an excellent starting point and an example to get your own monitoring script up and running. If you run into any issues or would like help, please let me know! 
 
@@ -136,4 +196,30 @@ expandedProductLinks[currentTime.getMinutes()].click();
 
 ```Python
 # Be sure to save the JavaScript above into a file that will be loaded in 
+
+# dependencies 
+from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
+import os
+
+# vars 
+js_path = os.path.join(os.path.expanduser('~'), 'Desktop', 'dealOfTheDayProduct.js')
+click_product_script = open(js_path, 'r').read()
+
+# optional browser config 
+options = Options()
+options.add_argument("--headless")
+
+# start browser and get to daily deal page
+browser = webdriver.Firefox(options=options)
+browser.get('https://www.bestbuy.com/site/misc/deal-of-the-day/pcmcat248000050016.c')
+
+# run JS to open product
+browser.execute_script(click_product_script)
+
+# validate product page 
+browser.find_element_by_css_selector('img.primary-image')
+
+# close processes
+browser.quit()
 ```
