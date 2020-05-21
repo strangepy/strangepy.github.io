@@ -16,10 +16,13 @@ There are a few approaches to solving this problem. Some of the ones that first 
 2. Writing a script to automatically configure a synthetic single-page monitor for each deal of the day. 
 3. Write a multi-page synthetic monitor that will visit the deal of the day page, and then dynamically visit each individual deal page. 
 
+### Manual Configuration
 Manually configuring a synthetic monitor for each product is not scalable and is a heavy time investment. If you want full coverage of all hours of the day, then you may need to update the monitors when the daily deals refresh (which is often at midnight or early in the morning). What about weekends? What about when products are sold out? This approach should be your last choice. 
 
+### Automatic Creation with API
 Automatically configuring the single page monitors is a big step in the right direction. You will need to be able to run a process to pull down a URL for each product included in the daily deals, but that is much easier than manually configuring it. This approach hinges on whether or not the synthetic monitoring solution you are using has an API for creating and deleting synthetic monitors. The ability to programatically delete a monitor is also important for products that have gone out of stock. The client I was working with in this case did not support creating and deleting synthetic monitors programatically, so we considered the next option. 
 
+### Automatic Monitoring with JavaScript
 Automatically pulling the URLs for each product on the deals page is another great approach. This will monitor the deals page itself, as well as each individual product. For bonus points, this script will also only include in stock products, since monitoring an out of stock product is pointless. This approach involves mapping up each product with a specific minute of the hour, so it will consistently hit one product each minute for the entire hour. If there are greater than 60 products offered on your deals page, then you can add additional logic for multiple synthetic locations as well. 
 
 ## The Solution
@@ -53,33 +56,35 @@ document.querySelectorAll('button.add-to-cart-button')
 
 There are 14 buttons returned by this query selector. If we take a closer look at each one, the sold out button is included in the list. This seems counterintuitive, since a disabled button displaying "sold out" is not typically an add to cart button. The solution for this site is simple, we need to add a check to ensure that the add to cart button is not disabled. 
 
-`document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)')`
+```JavaScript
+document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)')
+```
 
 Now we can throw those buttons into a variable. Since we do not want to click on the Add to Cart button itself, we can use one element to test pulling the href for that product. 
 
-`
+```JavaScript
 var addToCartButtons = document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)');
 // for testing only
 addToCartButtons[12].closest('div.row').querySelector('[id*=list-offer-header] > a');
-`
+```
 
 Now that we have the path to the href for each product with a valid Add to Cart button, we can push those into a separate array with a forEach loop. 
 
-`
+```JavaScript
 // empty array to receive links 
 var productLinks = [];
 // push each link into the array 
 addToCartButtons.forEach(element => productLinks.push(element.closest('div.row').querySelector('div.info-block > h3 > a')))
-`
+```
 
-Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. For this part, we have assumed that there are up to 60 products on the daily deals page, so we want to expand the array above to a length of sixty. Keep in mind that it would be possible for the daily deal page to only have a single product, so in this case we want to repeat the productLinks array 60 times, flatten it, and then slice out the first 60 items. If you are scaling up your script to allow for more than 60 products, then simply replace "60" with the desired number and modify the click() function in the next step. 
+Now that we have the array of links, the only piece of JavaScript left is to map each product to a minute and then click on the product for the current minute. For this part, we have assumed that there are up to 60 products on the daily deals page, so we want to expand the array above to a length of sixty. Keep in mind that it would be possible for the daily deal page to only have a single product, so in this case we want to repeat the `productLinks` array 60 times, flatten it, and then slice out the first 60 items. If you are scaling up your script to allow for more than 60 products, then simply replace "60" with the desired number and modify the click() function in the next step. 
 
-`
+```JavaScript
 // expand the productLinks array into an array of 60 elements 
 var expandedProductLinks = Array(60).fill(productLinks).flat().slice(0,60);
 // if your page can have more than 60 products, fill your number in place of "length" below
 var expandedProductLinks = Array(length).fill(productLinks).flat().slice(0,length);
-`
+```
 
 From this point, the only bit of JavaScript left is to grab the current minute and actually click on one of the products! 
 
