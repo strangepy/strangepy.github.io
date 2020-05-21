@@ -8,7 +8,7 @@ tags: [web-performance, javascript]
 Daily deals pages are one of the most important pages of your website. But they change every single day, or sometimes multiple times per day. How can you check that each one of these products is up and running without manually creating a new monitor each day? 
 
 ## Setup 
-For today's task, you will need access to a synthetic monitoring solution that supports evaluating JavaScript on the page. Ideally, this will be Selenium or Katalon Studio. My examples will be based on Selenium, but with minor changes you should be able to port this code over to any other synthetic monitoring software. 
+For today's task, you will need access to a synthetic monitoring solution that supports evaluating JavaScript on the page. Ideally, this will be Selenium or Katalon Studio. My examples will be based on Selenium, but with minor changes you should be able to port this code over to any other synthetic monitoring software. If you are interested in setting up Selenium with the Python bindings on your local machine, follow this guide on [Getting Started with Selenium Testing in Python](https://www.strangepy.com/2020-02-06-python-chrome-webdriver/).
 
 ## The Problem 
 There are a few approaches to solving this problem. Some of the ones that first come to mind are: 
