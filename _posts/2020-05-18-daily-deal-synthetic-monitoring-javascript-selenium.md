@@ -107,7 +107,33 @@ As I mentioned above, you should tailor the HTML selectors to your individual si
 For some future enhancements, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
 
 ### Full JavaScript Code 
-` code block `
+
+```JavaScript 
+// grab all buttons with enabled Add to Cart text
+var addToCartButtons = document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)');
+
+// create empty array to receive links 
+var productLinks = [];
+
+// push product link for each button into the array 
+addToCartButtons.forEach(element=>
+    productLinks.push(
+        element.closest('div.row').querySelector('div.info-block > h3 > a')
+    )
+)
+
+// expand the productLinks array into an array of 60 elements 
+var expandedProductLinks = Array(60).fill(productLinks).flat().slice(0, 60);
+
+// grab the current time 
+var currentTime = new Date();
+
+// click on the appropriate product for the current minute
+expandedProductLinks[currentTime.getMinutes()].click();
+```
 
 ### Full Python Code 
-` code block `
+
+```Python
+# Be sure to save the JavaScript above into a file that will be loaded in 
+```
