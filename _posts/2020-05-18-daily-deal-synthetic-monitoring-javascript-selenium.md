@@ -1,6 +1,6 @@
 ---
 title: How to Automatically Monitor Daily Deals Pages
-subtitle: without manually creating a hundred monitors
+subtitle: without manually creating fifty monitors
 image: /img/justin-lim-JKjBsuKpatU-unsplash.jpg
 tags: [web-performance, javascript]
 ---
@@ -33,15 +33,15 @@ To get started, I searched online for "daily deals" and the top result was [Best
 
 First, you should open up this page in your browser. There are a few things to look for on the page. At the top of the page, there is a featured deal of the day. 
 
-![Featured Deal of the Day](/img/dealoftheday1.png)
+![Best Buy Electronics Featured Deal of the Day](/img/dealoftheday1.png)
 
 If you scroll down a bit you can see there are quite a few "bonus deals" of the day that are being offered. There are also some "Shop Now" advertisement buttons that we do not want to include in this test, since those are not special deals of the day. 
 
-![Bonus Deals and Shop Now](/img/dealoftheday2.png)
+![Best Buy Electronics Bonus Deals and Shop Now](/img/dealoftheday2.png)
 
 Scrolling down a bit further, we can see that there are even a few deals that have sold out. Since there are only a few hours left before these deals expire, this is entirely normal. As you get closer to the end of the day, some products should be sold out. So, we also want to exclude expired deals from the test. 
 
-![Sold Out Deals](/img/dealoftheday3.png)
+![Best Buy Electronics Sold Out Deals](/img/dealoftheday3.png)
 
 Remember to check for each of these items on your daily deals page. This will be important for the next step where we actually start writing a bit of code. 
 
@@ -63,8 +63,10 @@ document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)')
 Now we can throw those buttons into a variable. Since we do not want to click on the Add to Cart button itself, we can use one element to test pulling the href for that product. 
 
 ```JavaScript
+// grab all buttons with enabled add to cart text 
 var addToCartButtons = document.querySelectorAll('button.add-to-cart-button:not(.btn-disabled)');
-// for testing only
+
+// use single button for testing only
 addToCartButtons[12].closest('div.row').querySelector('[id*=list-offer-header] > a');
 ```
 
@@ -73,6 +75,7 @@ Now that we have the path to the href for each product with a valid Add to Cart 
 ```JavaScript
 // empty array to receive links 
 var productLinks = [];
+
 // push each link into the array 
 addToCartButtons.forEach(element => productLinks.push(element.closest('div.row').querySelector('div.info-block > h3 > a')))
 ```
@@ -82,6 +85,7 @@ Now that we have the array of links, the only piece of JavaScript left is to map
 ```JavaScript
 // expand the productLinks array into an array of 60 elements 
 var expandedProductLinks = Array(60).fill(productLinks).flat().slice(0,60);
+
 // if your page can have more than 60 products, fill your number in place of "length" below
 var expandedProductLinks = Array(length).fill(productLinks).flat().slice(0,length);
 ```
@@ -90,7 +94,8 @@ From this point, the only bit of JavaScript left is to grab the current minute a
 
 ```JavaScript
 // grab the current time 
-var currentTime = new Date(); 
+var currentTime = new Date();
+
 // click on the appropriate product for the current minute
 expandedProductLinks[currentTime.getMinutes()].click();
 ```
@@ -160,11 +165,11 @@ browser.quit()
 
 The Python code above is a simplified example to test out the process and JavaScript code on your local machine. Talk with your synthetics provider to ensure they support selenium-based browser testing and evaluating JavaScript code within a synthtic monitor first. This kind of testing is common, so the question is typically "How can I set this up within their software?" rather than "Can it be done?".
 
-## Closing Thoughts
-As I mentioned above, you should tailor the HTML selectors to your individual site. Keep in mind that Best Buy may not have the same site structure long-term, so the example above will not work forever. But, it should serve as an excellent starting point and an example to get your own monitoring script up and running. If you run into any issues or would like help, please let me know! 
-
 ### Future Enhancements
 For some future enhancements, you may want to scale up this solution if your site offers greater than 60 deals in a day. This particular client did not anticipate releasing more than 60 deals per day, but I will be writing a post covering that functionality in the future. You may also want to add some additional success criteria for each product page, such as verifying a product image is visible and validating particular elements. 
+
+## Closing Thoughts
+As I mentioned above, you should tailor the HTML selectors to your individual site. Keep in mind that Best Buy may not have the same site structure long-term, so the example above will not work forever. But, it should serve as an excellent starting point and an example to get your own monitoring script up and running. If you run into any issues or would like help, please let me know! 
 
 ### Full JavaScript Code 
 
