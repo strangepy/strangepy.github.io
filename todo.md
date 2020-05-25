@@ -19,7 +19,23 @@ type: info
 - Testing https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-05-01-defer-offscreen-images.md
 - Additional info https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-05-15-creating-requests-class.md
 
-Other
+## Other
 - New post for multithreading selenium class 
 - New post for requests class
 - Post for API client? 
+
+## Unpublished Posts 
+<div class="posts-list">
+  {% for post in paginator.posts %}
+  {% if post.published == false %} 
+  <article class="post-preview">
+    <a href="{{ post.url | relative_url }}">
+	  <h2 class="post-title">{{ post.title }}</h2>
+    </a>
+    <p class="post-meta">
+      Posted on {{ post.date | date: site.date_format }}
+    </p>
+  </article>
+  {% endif %}
+  {% endfor %}
+</div>
