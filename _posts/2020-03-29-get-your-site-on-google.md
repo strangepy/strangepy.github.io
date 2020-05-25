@@ -2,6 +2,7 @@
 title: How to Get Your Site Recognized by Google
 subtitle: and Ensure Your Competitors Do Not Poach Your Traffic
 tags: web-development
+image: /img/jamie-street-PE3JGtPVTY8-unsplash.jpg
 ---
 
 Great! You just launched a shiny new website. But, when you Google it, there are no results, or results for competitors! Every small website builder experiences this problem, and it is extremely important to get your site listed on Google so users can start finding it. 
