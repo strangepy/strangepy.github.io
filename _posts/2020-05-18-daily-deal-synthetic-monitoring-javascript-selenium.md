@@ -1,6 +1,6 @@
 ---
 title: How to Automatically Monitor Daily Deals Pages
-subtitle: without manually creating fifty monitors
+subtitle: without manually creating dozens of monitors
 image: /img/justin-lim-JKjBsuKpatU-unsplash.jpg
 tags: [web-performance, javascript]
 ---
