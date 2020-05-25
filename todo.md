@@ -28,14 +28,12 @@ type: info
 <div class="posts-list">
   {% for post in paginator.posts %}
   {% if post.published == false %} 
-  <article class="post-preview">
     <a href="{{ post.url | relative_url }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
     </a>
     <p class="post-meta">
       Posted on {{ post.date | date: site.date_format }}
     </p>
-  </article>
   {% endif %}
   {% endfor %}
 </div>
