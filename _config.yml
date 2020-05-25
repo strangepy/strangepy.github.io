@@ -148,6 +148,9 @@ gtag: "UA-155086189-1"
 # Truncates the excerpt to the specified number of words on the index page
 excerpt_length: 50
 
+# Empty variable to hold the data-src for deferred images 
+data-src: ""
+
 # Character used to separate site title and description in HTML document title
 # and RSS feed title
 title-separator: "-"
