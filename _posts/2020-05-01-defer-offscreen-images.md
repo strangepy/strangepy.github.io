@@ -1,7 +1,7 @@
 ---
 title: Exploring How to Defer Offscreen Images 
 subtitle: using only JavaScript
-image: /img/mstile-144x144.png
+image: /img/jon-tyson-FlHdnPO6dlw-unsplash.jpg
 tags: [web-performance, javascript]
 ---
 
