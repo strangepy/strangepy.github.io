@@ -177,6 +177,7 @@ defaults:
       layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
+      image: "/img/mstile-144x144.png" # use logo as default image
   -
     scope:
       path: "" # all files
