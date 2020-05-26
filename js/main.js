@@ -138,3 +138,14 @@ var main = {
 // 2fc73a3a967e97599c9763d05e564189
 
 document.addEventListener('DOMContentLoaded', main.init);
+
+// Image deferral script 
+var images = document.querySelectorAll('img');
+function deferImg(image){
+    if (image.getAttribute('data-src')) {
+            image.setAttribute('src', image.getAttribute('data-src'));
+        }
+};
+document.addEventListener('readystatechange', () => {    
+  if (document.readyState == 'complete') images.forEach(deferImg);
+});
