@@ -62,3 +62,26 @@ document.addEventListener('readystatechange', () => {
   if (document.readyState == 'complete') images.forEach(deferImg);
 });
 ```
+
+## HTML 
+The specific HTML will be a bit different depending on how your site is structured. In general, you should have an image with a `src` attribute by default, and you want to switch the `src` value into the `data-src` parameter, and then set the `src` to your base-64 encoded placeholder iamge. 
+```HTML 
+<!-- Before -->
+<img src="/img/mstile-144x144.png" >
+
+<!-- After -->
+<img data-src="/img/mstile-144x144.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAQAAABNTyozAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAQECMiOITkyMAAADPklEQVR42u3dTUiTcQDH8d9yYQeNioKKoDdJKjoICWGX6jiCTkJh5MFLnTpYBwnxJNQtCuwQVIQQeQkhIgkKqUMlHQSJQupSRNgbFmjZix3G3Nvz7Den25j7fnbZ/v//nmfPl82NqZsEAAAAAEC4Uc0W4TSpPbl2uqzcR112KzWkzeHTlRRotkjb3aB7WhU2SSBJ2qU7qg2eIlDcAV1XJGiCQAnH1B00HC33Uc/DwgJ91zU90ZQa1aa9gSt69EoD5T7IhRhZwJP5U62f205EZ0JWTWt/5k4j87qJqa6qqYgxOjWcNfZczQVu7bN2ayJtpE+nQla2aHxxDmG4KC/bEqcjAXt8VvDWzmVta51mQtaOa23qwur4IT2UNfJJL0LWNmhQK5IXqyPQt4Cxr6GrW3Qz2aU6Am0LGNueY32rzifOVkegtqyRZjXmvMZZnYyfqaRAhTuug2mXa9Vnr3NZMamyAhV+D6rRoNrnjnWHHoS8VEwV1W01Vc8r6XrdUI8e6q+26FCeR12nu9pXOYE2pbwWLsxWdczzGht1q3IeYrvVUPJ9/lJX5QQqvVmd0GMChevWQGU9i5XWFfVKBAozpNPxMwQKMqpW/Y6fJVC2d4rpR+ICgTJNKqYPyYsESvdHRzWWOlDsQGsUyTj1lrtBTp26nz7APSjVBV3KHCJQUr+6sgcJlPBIHUHvFxAo7rVaNRM0QSBJmlBMX4KnCCRN6bDehk0S6J/aNRI+XTnvKOanXxfneY1pvcw1vdQCfQz9jWmBeIgZBDIIZBDIIJBBIINABoGMaOAfF2Wa0fty39ByiepNHqvGcv9HzFLGQ8wgkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGfl9wNLOgO8xqS/q7epPfBrvnOWlSpIuv0A1Wl3i21VX+hTBeIgZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgYxo4PcgL57sr/L4WdQ9Thf1aAAAAAAAJfEfaGgQuLoUUnMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDEtMDFUMDI6NTA6MzUrMDE6MDAAFiETAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTAxLTAxVDAyOjUwOjM1KzAxOjAwcUuZrwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==">
+```
+
+The above is an example for one specific image. You likely don't want to manually do this for every single one of your images on your website. How to set it for your website may be different than mine.  My website is hosted on GitHub pages and uses Jekyll with Liquid variables, so the change is quite a bit more concise here. 
+
+```HTML
+<!-- Before -->
+<img src="{{ post.image | relative_url }}" >
+     
+
+<!-- After -->
+<img src="{{ site.encodedlogo }}" data-src="{{ post.image | relative_url }}">
+```
+
+Note that the above is only possible due to the support for Liquid variables. If you do not use the Liquid templating engine in your website, then this approach will not work, but you should have something similar for dynamically loading in iamges without manually setting each one. One more note about the example f
