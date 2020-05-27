@@ -25,17 +25,4 @@ type: info
 - Post for API client? 
 
 ## Unpublished Posts 
-<div class="aside">
-<div class="posts-list">
-  {% for post in paginator.posts %}
-  {% if post.published == false %} 
-    <a href="{{ post.url | relative_url }}">
-	  <h2 class="post-title">{{ post.title }}</h2>
-    </a>
-    <p class="post-meta">
-      Posted on {{ post.date | date: site.date_format }}
-    </p>
-  {% endif %}
-  {% endfor %}
-</div>
-</div>
+<div class="aside"><div class="posts-list">{% for post in paginator.posts %}{% if post.published == false %} <a href="{{ post.url | relative_url }}"><h2 class="post-title">{{ post.title }}</h2></a><p class="post-meta">Posted on {{ post.date | date: site.date_format }}</p>{% endif %}{% endfor %}</div></div>
