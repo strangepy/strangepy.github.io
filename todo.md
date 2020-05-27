@@ -25,6 +25,7 @@ type: info
 - Post for API client? 
 
 ## Unpublished Posts 
+<div class="aside">
 <div class="posts-list">
   {% for post in paginator.posts %}
   {% if post.published == false %} 
@@ -36,4 +37,5 @@ type: info
     </p>
   {% endif %}
   {% endfor %}
+</div>
 </div>
