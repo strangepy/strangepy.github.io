@@ -7,16 +7,17 @@ tags: [web-performance, javascript]
 
 Google PageSpeed Insights is a wonderful tool for improving your website. However, it can also be difficult to tell which improvements you should focus on first. For mobile devices, deferring offscreen images can improve page speed significantly. But keeping track of the user's scroll position can be costly, and you do not want to trade download time for processing time. This post will explore an option using pure JavaScript that does not rely on scroll position. 
 
-The basic idea of this approach is to load in a small base-64 image as a placeholder until the onload event, and then after the onload event we will load in each image for the page. This process is based largely on the [wonderful post here.](
-https://varvy.com/pagespeed/defer-images.html)
+The basic idea of this approach is to load in a small base-64 image as a placeholder until the onload event, and then after the onload event we will replace the placeholder with the actual image. This process is based largely on the [wonderful post here.](https://varvy.com/pagespeed/defer-images.html)
 
-Here is the base 64 image we will be using (encoders can easily be found online):
+## Encoding an Image
+
+For this website, we're going to use the strangePy logo as the placeholder image. All you need to do is upload your desired image to an encoder website, such as [base64-image.de](https://www.base64-image.de/) and then copy the output. Below is the raw output of the base64 encoded image. 
 
 ```
 data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAQAAABNTyozAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAQECMiOITkyMAAADPklEQVR42u3dTUiTcQDH8d9yYQeNioKKoDdJKjoICWGX6jiCTkJh5MFLnTpYBwnxJNQtCuwQVIQQeQkhIgkKqUMlHQSJQupSRNgbFmjZix3G3Nvz7Den25j7fnbZ/v//nmfPl82NqZsEAAAAAEC4Uc0W4TSpPbl2uqzcR112KzWkzeHTlRRotkjb3aB7WhU2SSBJ2qU7qg2eIlDcAV1XJGiCQAnH1B00HC33Uc/DwgJ91zU90ZQa1aa9gSt69EoD5T7IhRhZwJP5U62f205EZ0JWTWt/5k4j87qJqa6qqYgxOjWcNfZczQVu7bN2ayJtpE+nQla2aHxxDmG4KC/bEqcjAXt8VvDWzmVta51mQtaOa23qwur4IT2UNfJJL0LWNmhQK5IXqyPQt4Cxr6GrW3Qz2aU6Am0LGNueY32rzifOVkegtqyRZjXmvMZZnYyfqaRAhTuug2mXa9Vnr3NZMamyAhV+D6rRoNrnjnWHHoS8VEwV1W01Vc8r6XrdUI8e6q+26FCeR12nu9pXOYE2pbwWLsxWdczzGht1q3IeYrvVUPJ9/lJX5QQqvVmd0GMChevWQGU9i5XWFfVKBAozpNPxMwQKMqpW/Y6fJVC2d4rpR+ICgTJNKqYPyYsESvdHRzWWOlDsQGsUyTj1lrtBTp26nz7APSjVBV3KHCJQUr+6sgcJlPBIHUHvFxAo7rVaNRM0QSBJmlBMX4KnCCRN6bDehk0S6J/aNRI+XTnvKOanXxfneY1pvcw1vdQCfQz9jWmBeIgZBDIIZBDIIJBBIINABoGMaOAfF2Wa0fty39ByiepNHqvGcv9HzFLGQ8wgkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGfl9wNLOgO8xqS/q7epPfBrvnOWlSpIuv0A1Wl3i21VX+hTBeIgZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgYxo4PcgL57sr/L4WdQ9Thf1aAAAAAAAJfEfaGgQuLoUUnMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDEtMDFUMDI6NTA6MzUrMDE6MDAAFiETAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTAxLTAxVDAyOjUwOjM1KzAxOjAwcUuZrwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg==
 ```
 
-Here is how the image looks when it actually renders on the page. 
+The text above looks lengthy, but we're not going to be typing that in anywhere. This is what the image looks like when it actually renders on the page (you can even inspect it in your browser to see how it works).
 <img id='base64image' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQCAQAAABNTyozAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfkAQECMiOITkyMAAADPklEQVR42u3dTUiTcQDH8d9yYQeNioKKoDdJKjoICWGX6jiCTkJh5MFLnTpYBwnxJNQtCuwQVIQQeQkhIgkKqUMlHQSJQupSRNgbFmjZix3G3Nvz7Den25j7fnbZ/v//nmfPl82NqZsEAAAAAEC4Uc0W4TSpPbl2uqzcR112KzWkzeHTlRRotkjb3aB7WhU2SSBJ2qU7qg2eIlDcAV1XJGiCQAnH1B00HC33Uc/DwgJ91zU90ZQa1aa9gSt69EoD5T7IhRhZwJP5U62f205EZ0JWTWt/5k4j87qJqa6qqYgxOjWcNfZczQVu7bN2ayJtpE+nQla2aHxxDmG4KC/bEqcjAXt8VvDWzmVta51mQtaOa23qwur4IT2UNfJJL0LWNmhQK5IXqyPQt4Cxr6GrW3Qz2aU6Am0LGNueY32rzifOVkegtqyRZjXmvMZZnYyfqaRAhTuug2mXa9Vnr3NZMamyAhV+D6rRoNrnjnWHHoS8VEwV1W01Vc8r6XrdUI8e6q+26FCeR12nu9pXOYE2pbwWLsxWdczzGht1q3IeYrvVUPJ9/lJX5QQqvVmd0GMChevWQGU9i5XWFfVKBAozpNPxMwQKMqpW/Y6fJVC2d4rpR+ICgTJNKqYPyYsESvdHRzWWOlDsQGsUyTj1lrtBTp26nz7APSjVBV3KHCJQUr+6sgcJlPBIHUHvFxAo7rVaNRM0QSBJmlBMX4KnCCRN6bDehk0S6J/aNRI+XTnvKOanXxfneY1pvcw1vdQCfQz9jWmBeIgZBDIIZBDIIJBBIINABoGMaOAfF2Wa0fty39ByiepNHqvGcv9HzFLGQ8wgkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGQQyCGQQyCCQQSCDQAaBDAIZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgQwCGfl9wNLOgO8xqS/q7epPfBrvnOWlSpIuv0A1Wl3i21VX+hTBeIgZBDIIZBDIIJBBIINABoEMAhkEMghkEMggkEEgg0AGgYxo4PcgL57sr/L4WdQ9Thf1aAAAAAAAJfEfaGgQuLoUUnMAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjAtMDEtMDFUMDI6NTA6MzUrMDE6MDAAFiETAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIwLTAxLTAxVDAyOjUwOjM1KzAxOjAwcUuZrwAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=='/>
 
 Now that we have the base-64 encoded image ready to go, we can start implementing the image deferral logic into the website. First, we'll want to write a few lines of Javascript to swap the encoded placeholder image for the proper image. Then, we'll want to update our webpages to use the encoded placeholder image by default, and add a `data-src` parameter onto the `<img>` tag in order to hold the proper image source. 
@@ -64,7 +65,7 @@ document.addEventListener('readystatechange', () => {
 ```
 
 ## HTML 
-The specific HTML will be a bit different depending on how your site is structured. In general, you should have an image with a `src` attribute by default, and you want to switch the `src` value into the `data-src` parameter, and then set the `src` to your base-64 encoded placeholder iamge. 
+The specific HTML will be a bit different depending on how your site is structured. In general, you should have an image with a `src` attribute by default, and you want to switch the `src` value into the `data-src` parameter, and then set the `src` to your base-64 encoded placeholder image. 
 ```HTML 
 <!-- Before -->
 <img src="/img/mstile-144x144.png" >
@@ -84,4 +85,10 @@ The above is an example for one specific image. You likely don't want to manuall
 <img src="{{ site.encodedlogo }}" data-src="{{ post.image | relative_url }}">
 ```
 
-Note that the above is only possible due to the support for Liquid variables. If you do not use the Liquid templating engine in your website, then this approach will not work, but you should have something similar for dynamically loading in iamges without manually setting each one. One more note about the example f
+Note that the above is only possible due to the support for Liquid variables. If you do not use the Liquid templating engine in your website, then this approach will not work, but you should have something similar for dynamically loading in images without manually setting each one. One more note on the example above, I saved the base-64 encoded image into a site variable named `encodedlogo` so there is just one easy place for me to update the encoded image in the future if I ever need to. 
+
+## Closing Thoughts
+This should be all you need to do on your website! Just encode an image (such as your logo), enter the encoded image into your `src` attribute, and set the `data-src` attribute to the proper image reference. The few lines of JavaScript that we wrote earlier will take care of the rest! 
+
+## Further Reading
+- [The original article written by Patrick Sexton that inspired this post.](https://varvy.com/pagespeed/defer-images.html)
