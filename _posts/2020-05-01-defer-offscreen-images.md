@@ -9,7 +9,7 @@ tags: [web-performance, javascript]
 
 ## The Solution 
 
-First off, how do you even know if this post applies to you?? You can use an automated reporting tool, such as Lighthouse or PageSpeed Insights, to check for offscree images that should be deferred. In most browsers, you can open the developer console, click on the Audits or Lighthouse tab, and then click Run Report to kick off a new report. Otherwise, you can visit the [PageSpeed Insights website](https://developers.google.com/speed/pagespeed/insights/) and paste in the URL you want to audit. If "Defer offscreen images" is in the list of improvements, then this post will apply to you! Here is an example of what that recommendation looks like in my browser. 
+First off, how do you even know if this post applies to you?? You can use an automated reporting tool, such as [Lighthouse](https://developers.google.com/web/tools/lighthouse) or PageSpeed Insights, to check for offscree images that should be deferred. In most browsers, you can open the developer console, click on the Audits or Lighthouse tab, and then click Run Report to kick off a new report. Otherwise, you can visit the [PageSpeed Insights website](https://developers.google.com/speed/pagespeed/insights/) and paste in the URL you want to audit. If "Defer offscreen images" is in the list of improvements, then this post will apply to you! Here is an example of what that recommendation looks like in my browser. 
 
 ![Deferring offscreen images on this page is recommended](/img/lighthouse_defer_offscreen_images_before.png)
 
