@@ -149,3 +149,11 @@ function deferImg(image){
 document.addEventListener('readystatechange', () => {    
   if (document.readyState == 'complete') images.forEach(deferImg);
 });
+
+// Default alt text 
+function setAlt(image){
+    if(image.alt==""&&image.class=="avatar-img"){image.alt="Generic blog post avatar image"}
+};
+document.addEventListener('readystatechange', () => {    
+  if (document.readyState == 'complete') images.forEach(setAlt);
+});
