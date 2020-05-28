@@ -5,9 +5,15 @@ image: /img/jon-tyson-FlHdnPO6dlw-unsplash.jpg
 tags: [web-performance, javascript]
 ---
 
-Google PageSpeed Insights is a wonderful tool for improving your website. However, it can also be difficult to tell which improvements you should focus on first. For mobile devices, deferring offscreen images can improve page speed significantly. But keeping track of the user's scroll position can be costly, and you do not want to trade download time for processing time. This post will explore an option using pure JavaScript that does not rely on scroll position. 
+[Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) is a wonderful tool for improving your website. However, it can also be difficult to tell which improvements you should focus on first. For mobile devices, deferring offscreen images can improve page speed significantly. But keeping track of the user's scroll position can be costly, and you do not want to trade download time for processing time. This post will explore an option using pure JavaScript that does not rely on scroll position. 
 
-The basic idea of this approach is to load in a small base-64 image as a placeholder until the onload event, and then after the onload event we will replace the placeholder with the actual image. This process is based largely on the [wonderful post here.](https://varvy.com/pagespeed/defer-images.html)
+## The Solution 
+
+First off, how do you even know if this post applies to you?? You can use an automated reporting tool, such as Lighthouse or PageSpeed Insights, to check for offscree images that should be deferred. In most browsers, you can open the developer console, click on the Audits or Lighthouse tab, and then click Run Report to kick off a new report. Otherwise, you can visit the [PageSpeed Insights website](https://developers.google.com/speed/pagespeed/insights/) and paste in the URL you want to audit. If "Defer offscreen images" is in the list of improvements, then this post will apply to you! Here is an example of what that recommendation looks like in my browser. 
+
+![Deferring offscreen images on this page is recommended](/img/lighthouse_defer_offscreen_images_before.png)
+
+Now that you know this post applies to you, we can cover the general approach. The basic idea of this approach is to load in a small base-64 image as a placeholder until the onload event, and then after the onload event we will replace the placeholder with the actual image. This process is based largely on the [wonderful post here.](https://varvy.com/pagespeed/defer-images.html)
 
 ## Encoding an Image
 
@@ -89,6 +95,9 @@ Note that the above is only possible due to the support for Liquid variables. If
 
 ## Closing Thoughts
 This should be all you need to do on your website! Just encode an image (such as your logo), enter the encoded image into your `src` attribute, and set the `data-src` attribute to the proper image reference. The few lines of JavaScript that we wrote earlier will take care of the rest! 
+
+For a quick sanity check, we can run another audit and confirm that "Defer offscreen images" is no longer one of the recommendations. You can expand the "Passed audits" section to verify that the check has passed. 
+![Offscreen images have been successfully deferred](/img/lighthouse_defer_offscreen_images_before.png)
 
 ## Further Reading
 - [The original article written by Patrick Sexton that inspired this post.](https://varvy.com/pagespeed/defer-images.html)
