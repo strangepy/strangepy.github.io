@@ -152,7 +152,7 @@ document.addEventListener('readystatechange', () => {
 
 // Default alt text 
 function setAlt(image){
-    if(image.alt==""&&image.class=="avatar-img"){image.alt="Generic blog post avatar image"}
+    if(image.alt==""&&image.classList.contains("avatar-img")){image.alt="Generic blog post avatar image"}
 };
 document.addEventListener('readystatechange', () => {    
   if (document.readyState == 'complete') images.forEach(setAlt);
