@@ -99,7 +99,7 @@ This should be all you need to do on your website! Just encode an image (such as
 
 For a quick sanity check, we can run another audit and confirm that "Defer offscreen images" is no longer one of the recommendations. You can expand the "Passed audits" section to verify that the check has passed. 
 
-![Offscreen images have been successfully deferred](/img/lighthouse_defer_offscreen_images_before.png)
+![Offscreen images have been successfully deferred](/img/lighthouse_defer_offscreen_images_after.png)
 
 ## Further Reading
 - [The original article written by Patrick Sexton that inspired this post.](https://varvy.com/pagespeed/defer-images.html)
