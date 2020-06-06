@@ -11,3 +11,8 @@ updated font color for post-meta and a links in general under main.css and confi
 may also update blog tags and theme-by and copyright-by text
 
 Added alt text to some images to clear this up as well 
+
+![Lighthouse Accessibility Score Before Improvements](/img/lighthouse_accessibility_improvements_before.png "Accessibility Score Before Improvements")
+
+
+![Lighthouse Accessibility Score After Improvements](/img/lighthouse_accessibility_improvements_after.png "Accessibility Score After Improvements")
