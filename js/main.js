@@ -1,5 +1,3 @@
-// Dean Attali / Beautiful Jekyll 2016
-
 var main = {
 
   bigImgEl : null,
@@ -150,9 +148,9 @@ document.addEventListener('readystatechange', () => {
   if (document.readyState == 'complete') images.forEach(deferImg);
 });
 
-// Default alt text 
+// Default alt text
 function setAlt(image){
-    if(image.alt==""&&image.classList.contains("avatar-img")){image.alt="Generic blog post avatar image"}
+    if(image.alt==""&&image.classList.contains("avatar-img")){image.alt="Generic blog post avatar image";}else if(image.alt==""&&image.closest('div').classList.contains('post-image')){image.alt="Generic blog post avatar image";}
 };
 document.addEventListener('readystatechange', () => {    
   if (document.readyState == 'complete') images.forEach(setAlt);
