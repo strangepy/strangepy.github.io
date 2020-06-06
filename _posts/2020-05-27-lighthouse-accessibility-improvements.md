@@ -4,12 +4,28 @@ subtitle: Using Lighthouse
 published: false
 ---
 
-Today, we will cover an often overlooked, but extremely important aspect of web performance: accessibility. Over 4 million people use screen readers when accessing websites in the United States, and simple modifications to your website make a big difference on their experience. This article obviously cannot be a full review of website accessibility, but instead will focus on the most prominent improvements: alt-text for images, tabbing between elements, and color contrast. 
+Today, we will cover an often overlooked, but extremely important aspect of web performance: accessibility. Over 4 million people use screen readers when accessing websites in the United States, and simple modifications to your website make a big difference on their experience. This article obviously cannot be a full review of website accessibility, but instead will focus on the most prominent improvements: alt-text for images and color contrast. After these improvements, our webpage's accessibility score went from 73 to 89 - which is 16 points higher for only an hour of light work! Depending on the configuration of your website, it may take a bit longer, but ideally these steps will become part of the deployment process for your website. Developers should be in the habit of setting alt-text for images and using the same high-contrast font colors. 
 
-https://web.dev/color-contrast/?utm_source=lighthouse&utm_medium=devtools
-https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html
 
+# Getting Started 
+
+To get started, we're going to kick off a Lighthouse audit in the developer tools of our web browser. This will provide us with a list of the accessibility improvements that can be automatically audited. As noted in the audit, it is recommended that you manually check additional items on your website that cannot be automatically audited. We'll cover that in a future post, but for now we're going to focus on the automatically generated recommendations. As always, if you are not comfortable using your browser's developer tools yet (or perhaps you are reading this from a mobile device), you can enter the URL you would like to audit at the [Google PageSpeed Insights website](https://developers.google.com/speed/pagespeed/insights/) to generate an online copy of the audit. For a recent blog post, the audit currently looks like this: 
+
+![Lighthouse Accessibility Score Before Improvements](/img/lighthouse_accessibility_improvements_before.png "Accessibility Score Before Improvements")
+
+A score of 73 is not ideal. Fortunately, there are some recommendations right within the Lighthouse tool to improve this score. Several passed audits are also noted under the Passed Audits tab, so your recommendations may be different than those shown here. With this information, we can move on to start actually implementing these improvements! 
+
+# Accessibility Improvements
+
+## High Contrast Link Colors 
+
+<!-- Add statistics for people with color blindness or impaired vision -->
 updated font color for post-meta and a links in general under main.css and config.yml
+
+
+[Google Developer's Page on Color Contrast](https://web.dev/color-contrast/)
+[W3's Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
+
 
 Post-Meta
 
@@ -53,17 +69,22 @@ Config.yml previously ```footer-text-col: "#777777"``` and previously ```link-co
 
 may also update blog tags and theme-by and copyright-by text
 
-Added alt text to some images to clear this up as well 
+## Alt-Text for Images 
 
-## Before 
+Added alt text to all  images to clear this up as well 
 
-![Lighthouse Accessibility Score Before Improvements](/img/lighthouse_accessibility_improvements_before.png "Accessibility Score Before Improvements")
+# Analyzing the Results
 
-## After
+One of the benefits of using the Lighthouse tool to audit your site is how quickly another audit can be run in your browser! GitHub pushes out changes to static websites like this one very quickly <!-- link to GitHub refresh time --> so within a few minutes we can see the result of these improvements. 
 
 ![Lighthouse Accessibility Score After Improvements](/img/lighthouse_accessibility_improvements_after_2.png "Accessibility Score After Improvements")
 
+Excellent! Our accessibility score has improved from 73 to 89 with just a few minutes of work! To verify these updates went through, we can also expand the "Passed Audits" section and see both of these items marked in green now. 
+
 ![Lighthouse Accessibility Audits After Improvements](/img/lighthouse_accessibility_improvements_after.png "Accessibility Audits After Improvements")
 
+This is where we will stop for today, but there will be future articles about improving accessibility on your website! 
 
+## Further Reading
+<!-- Add more links -->
 https://ux.stackexchange.com/questions/57340/percentage-of-screen-readers-users-in-usa#:~:text=Someone%20wrote%20a%20very%20detailed%20article%20as%20to%20why.&text=So%2088.5%25%20of%20326%20million,cannot%20see%20but%20are%20online.
