@@ -12,7 +12,7 @@ Step 4. At the scheduled time of your consult, we’ll consult! We’ll use the 
 Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you the exact steps for getting started. If you decide not to work with me or if we aren’t a perfect fit, I’m happy to share other resources to help you get what you need.
 -->
 
-<i class="fas fa-mortar-board"></i>
+<i class="fa fa-graduation-cap" aria-hidden="true"></i>
 
 Have questions? Simply fill out the short form below or [email me directly.](mailto:strangepy@gmail.com)
 
