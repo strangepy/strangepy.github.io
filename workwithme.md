@@ -13,7 +13,7 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 -->
 
 # About Me
-<ul style="list-style-type:none;">
+
 <li><i class="fa fa-briefcase" aria-hidden="true"></i> Currently working remotely at a small web performance startup. I wear many hats here! Previously worked in finance and healthcare (I even passed the Certified Equity Professional exam and am passionate about personal finance). </li>
 
 <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> Obtained a B.S. in Physics in three years from the [University of Arizona](https://www.arizona.edu/). If you're looking for an icebreaker, ask me about particle physics! </li>
@@ -29,7 +29,7 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 <li><i class="fa fa-book" aria-hidden="true"></i>If you're interested in my work, you can pull up my latest blog posts for a category or project. You can also [contact me](mailto:strangepy@gmail.com) with the word "Resume" in the subject line or a (possibly outdated) copy of my resume. Working with startups means that sometimes my skills develop faster than I can update my resume! </li>
 
 <li><i class="fa fa-address-book" aria-hidden="true"></i> Have questions? Simply fill out the short form below or [email me directly.](mailto:strangepy@gmail.com)</li>
-</ul>
+
 
 # Get in Touch
 
