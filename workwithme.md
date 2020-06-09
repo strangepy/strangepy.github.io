@@ -12,9 +12,23 @@ Step 4. At the scheduled time of your consult, we’ll consult! We’ll use the 
 Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you the exact steps for getting started. If you decide not to work with me or if we aren’t a perfect fit, I’m happy to share other resources to help you get what you need.
 -->
 
-<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+# About Me
 
-Have questions? Simply fill out the short form below or [email me directly.](mailto:strangepy@gmail.com)
+<i class="fa fa-briefcase" aria-hidden="true"></i> Currently working remotely at a small web performance startup. I wear many hats here! Previously worked in finance and healthcare (I even passed the Certified Equity Professional exam and am passionate about personal finance).  
+
+<i class="fa fa-graduation-cap" aria-hidden="true"></i> Obtained a B.S. in Physics in three years from the University of Arizona. If you're looking for an icebreaker, ask me about particle physics! 
+
+<i class="fa fa-code" aria-hidden="true"></i> I enjoy writing code to automate daily tasks and developing new skills to work more efficiently. Web scraping using a combination of the Python bindings for Selenium along with plain old JavaScript is an excellent way to accomplish this. 
+
+<i class="fa fa-bolt" aria-hidden="true"></i> Spent two years working in the Accelerator Mass Spectrometry Laboratory to design and fabricate an improved particle detector. Once, I accidentally created liquid oxygen in the lab and exploded a section of the equipment. (This is exactly why I am not a chemist!)
+
+<i class="fa fa-heart" aria-hidden="true"></i> Completely addicted to outdoor activities. Kayaking, rock climbing, ultimate frisbee, bicycling, distance running, camping, whitewater rafting, and hiking are a few of my many hobbies. When the weather does not accommodate outdoor adventures, I am also known to play a whole host of board games and online video games, as well as weekly D&D. 
+
+<i class="fa fa-globe" aria-hidden="true"></i> Grew up in Virginia and moved out to Arizona for college, despite not knowing a single person west of the Mississippi River. Uncomfortable experiences and life changes are oftentimes the key to personal growth and development, and I welcome those opportunities. I have visited over half of the states in America, and absolutely love cross country road trips. 
+
+<i class="fa fa-book" aria-hidden="true"></i>If you're interested in my work, you can pull up my latest blog posts for a category or project. You can also contact me with the word "Resume" in the subject line or a (possibly outdated) copy of my resume. Working with startups means that sometimes my skills develop faster than I can change my resume! 
+
+<i class="fa fa-address-book" aria-hidden="true"></i> Have questions? Simply fill out the short form below or [email me directly.](mailto:strangepy@gmail.com)
 
 # Get in Touch
 
