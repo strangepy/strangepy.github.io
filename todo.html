@@ -17,16 +17,9 @@ type: info
 <li>Most of https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-03-29-get-your-site-on-google.md</li>
 <li>Code examples https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-04-01-selenium-scraping-class.md</li>
 <li>Most of https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-04-08-image-timestamp-preprocess.md</li>
-<li>Testing https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-05-01-defer-offscreen-images.md</li>
 <li>Additional info https://github.com/strangepy/strangepy.github.io/blob/master/_posts/2020-05-15-creating-requests-class.md</li>
 </ul>
 
-<h2>Other</h2>
-<ul>
-<li>New post for multithreading selenium class </li>
-<li>New post for requests class</li>
-<li>Post for API client? </li>
-</ul>
 
 <h2>Unpublished Posts </h2>
 <div>{% for post in paginator.posts %}{% unless post.published %} <a href="{{ post.url | relative_url }}"><h2 class="post-title">{{ post.title }}</h2></a><p class="post-meta">Posted on {{ post.date | date: site.date_format }}</p>{% endunless %}{% if post.published==true %}<p><a href="{{ post.url | relative_url }}">Post</a></p>{% endif %}{% endfor %}</div>
