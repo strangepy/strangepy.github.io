@@ -787,3 +787,10 @@ pre {
   font-style: italic;
   font-size: 16px;
 }
+
+/* About page */
+
+.about-text {
+    position: relative;
+    margin-left: 30px;
+}
