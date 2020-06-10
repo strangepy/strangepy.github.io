@@ -107,6 +107,6 @@ This is where we will stop for today, but there will be future articles about im
 
 ## Further Reading
 <!-- Add more links -->
-[StackOverflow Page Regarding Percentage of Screen Reader Users in the US](https://ux.stackexchange.com/questions/57340/percentage-of-screen-readers-users-in-usa#:~:text=Someone%20wrote%20a%20very%20detailed%20article%20as%20to%20why.&text=So%2088.5%25%20of%20326%20million,cannot%20see%20but%20are%20online)
-[Google Developer's Page on Color Contrast](https://web.dev/color-contrast/)
-[W3's Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
+- [StackOverflow Page Regarding Percentage of Screen Reader Users in the US](https://ux.stackexchange.com/questions/57340/percentage-of-screen-readers-users-in-usa#:~:text=Someone%20wrote%20a%20very%20detailed%20article%20as%20to%20why.&text=So%2088.5%25%20of%20326%20million,cannot%20see%20but%20are%20online)
+- [Google Developer's Page on Color Contrast](https://web.dev/color-contrast/)
+- [W3's Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
