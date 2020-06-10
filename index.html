@@ -27,7 +27,6 @@ type: info
       {% if post.image %}
       <div class="post-image">
         <a href="{{ post.url | relative_url }}">
-          <!-- Previous logic <img src="{{ post.image | relative_url }}" data-src="{{ site.encodedlogo }}"> -->
 	  <img src="{{ site.encodedlogo }}" data-src="{{ post.image | relative_url }}">
         </a>
       </div>
