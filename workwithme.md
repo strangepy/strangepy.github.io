@@ -27,6 +27,7 @@ type: info
 
 
 <form action="https://formspree.io/strangepy@gmail.com" method="POST" class="form" id="contact-form">
+  <p>You can also send me a quick message using the form below. </p>
   <div class="row">
     <div class="col-xs-6">
       <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
