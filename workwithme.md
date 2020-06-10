@@ -14,7 +14,7 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 
 # About Me
 
-<p>
+<p class="about-text">
 <i class="fa fa-briefcase" aria-hidden="true"></i> Currently working remotely at a small web performance startup. I wear many hats here! Previously worked in finance and healthcare (I even passed the <a href="https://www.scu.edu/business/cepi/" >Certified Equity Professional</a> exam from the Leavey School of Business and am passionate about personal finance).</p>
 
 <li><i class="fa fa-graduation-cap" aria-hidden="true"></i> Obtained a B.S. in Physics in three years from the [University of Arizona](https://www.arizona.edu/). If you're looking for an icebreaker, ask me about particle physics! </li>
@@ -33,6 +33,7 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 </ul>
 
 # Get in Touch
+
 
 <form action="https://formspree.io/strangepy@gmail.com" method="POST" class="form" id="contact-form">
   <div class="row">
