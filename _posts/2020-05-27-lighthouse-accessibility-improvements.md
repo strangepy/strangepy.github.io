@@ -1,7 +1,7 @@
 ---
 title: Fast Improvements to Your Site's Accessibility Score
 subtitle: Using a Lighthouse Audit
-img: /img/yomex-owo-gRTzhQsiVG0-unsplash.jpg
+image: /img/yomex-owo-gRTzhQsiVG0-unsplash.jpg
 tags: [web-development, web-perforrmance]
 ---
 
