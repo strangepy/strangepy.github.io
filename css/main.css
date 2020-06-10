@@ -801,3 +801,11 @@ pre {
   left: -40px;
   margin-top: 5px;
 }
+
+#contact-form p {
+  margin-bottom: 10px;
+}
+
+#contact-form .form-control {
+  margin-bottom: 15px;
+}
