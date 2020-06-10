@@ -21,7 +21,7 @@ type: info
 
 <p class="about-text"><span class="fa fa-book about-icon" aria-hidden="true"></span>If you're interested in my work, you can pull up my latest blog posts for a category or project. You can also <a href="mailto:strangepy@gmail.com">contact me</a> with the word "Resume" in the subject line or a (possibly outdated) copy of my resume. Working with startups means that sometimes my skills develop faster than I can update my resume! </p>
 
-<p class="about-text"><span class="fa fa-address-book about-icon" aria-hidden="true"></span> Have questions? Simply fill out the short form below or <a href="mailto:strangepy@gmail.com">email me directly.</a></p>
+<p class="about-text"><span class="fa fa-question-circle about-icon" aria-hidden="true"></span> Have questions? Simply fill out the short form below or <a href="mailto:strangepy@gmail.com">email me directly.</a></p>
 
 # Get in Touch
 
