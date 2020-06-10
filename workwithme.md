@@ -14,7 +14,7 @@ Step 5. Then we’ll get started! If you decide to work with me, I’ll tell you
 
 # About Me
 
-<p class="about-text"><span class="fa fa-briefcase" aria-hidden="true"></span> Currently working remotely at a small web performance startup. I wear many hats here! Previously worked in finance and healthcare (I even passed the <a href="https://www.scu.edu/business/cepi/" >Certified Equity Professional</a> exam from the Leavey School of Business and am passionate about personal finance).</p>
+<p class="about-text"><span class="fa fa-briefcase about-icon" aria-hidden="true"></span> Currently working remotely at a small web performance startup. I wear many hats here! Previously worked in finance and healthcare (I even passed the <a href="https://www.scu.edu/business/cepi/" >Certified Equity Professional</a> exam from the Leavey School of Business and am passionate about personal finance).</p>
 <p class="about-text"><span class="fa fa-graduation-cap" aria-hidden="true"></span> Obtained a B.S. in Physics in three years from the <a href="https://www.arizona.edu/">University of Arizona</a>. If you're looking for an icebreaker, ask me about particle physics! </p>
 
 <p class="about-text"><span class="fa fa-code" aria-hidden="true"></span> I enjoy writing code to automate daily tasks and developing new skills to work more efficiently. Web scraping using a combination of the <a href="https://www.python.org/">Python</a> bindings for <a href="https://www.selenium.dev/">Selenium</a> along with plain old <a href="https://www.javascript.com/">JavaScript</a> is an excellent way to accomplish this. </p>
