@@ -1,7 +1,8 @@
 ---
-title: Improving Your Site's Accessibility Score
-subtitle: Using Lighthouse
-published: false
+title: Fast Improvements to Your Site's Accessibility Score
+subtitle: Using a Lighthouse Audit
+img: /img/yomex-owo-gRTzhQsiVG0-unsplash.jpg
+tags: [web-development, web-perforrmance]
 ---
 
 Today, we will cover an often overlooked, but extremely important aspect of web performance: accessibility. Over 4 million people use screen readers when accessing websites in the United States, and simple modifications to your website make a big difference on their experience. This article obviously cannot be a full review of website accessibility, but instead will focus on the most prominent improvements: alt-text for images and color contrast. After these improvements, our webpage's accessibility score went from 73 to 89 - which is 16 points higher for only an hour of light work! Depending on the configuration of your website, it may take a bit longer, but ideally these steps will become part of the deployment process for your website. Developers should be in the habit of setting alt-text for images and using the same high-contrast font colors. 
@@ -17,17 +18,16 @@ A score of 73 is not ideal. Fortunately, there are some recommendations right wi
 
 # Accessibility Improvements
 
-## High Contrast Link Colors 
+As I mentioned before, we'll be focusing on updating the text colors to be have a sufficient contrast ratio, and ensuring the alt-text is set for all of our images. 
 
+## High Contrast Colors 
+
+First up, we'll inspect each element that the Lighthouse audit identified with too low of a contrast ratio. If you need help choosing a high-contrast color that will mesh with your color scheme, you can check out the [W3 Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html) or the [Google Developer's Page on Color Contrast](https://web.dev/color-contrast/).
 <!-- Add statistics for people with color blindness or impaired vision -->
-updated font color for post-meta and a links in general under main.css and config.yml
 
+For the strangePy website, most of the element colors can be updated by changing the `.post-meta` section and the `a` section of our main.css file. There are also a few edits that need to be made to the navigation links in the footer as well as minor updates to the `theme-by` and `copyright-by` classes. 
 
-[Google Developer's Page on Color Contrast](https://web.dev/color-contrast/)
-[W3's Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
-
-
-Post-Meta
+### Post-Meta Class
 
 ```CSS
 .post-preview .post-meta,
@@ -39,7 +39,10 @@ Post-Meta
 }
 ```
 
-Links 
+### Navigation Links 
+
+For the `a` tags, when we open the `main.css` file, we see this: 
+
 ```CSS
 a {
   color: {{ site.link-col }};
@@ -50,8 +53,27 @@ a:focus {
 }
 ```
 
-Config.yml 
+That does not look like normal CSS. Instead, we're using [custom Liquid variables](https://jekyllrb.com/docs/variables/) to create a simple color scheme. Instead of setting this directly in `main.css`, we'll need to head over to the `config.yml` file to update these.  As you can see below, many of the navigation link (anchor tag) colors are controlled by this config.yml file. This means that there is one convenient place to update the link colors and we do not have to dig around in the CSS for popular settings. For today, we only need to update the `link-col` and the `footer-text-col` parameters. 
+
+**Before**
+
+```CSS
+# Personalize the colors in your website. Colour values can be any valid CSS colour
+
+navbar-col: "#F5F5F5"
+navbar-text-col: "#404040"
+navbar-children-col: "#F5F5F5"
+page-col: "#FFFFFF"
+link-col: "#008AFF"
+hover-col: "#0085A1"
+footer-col: "#F5F5F5"
+footer-text-col: "#777777"
+footer-link-col: "#404040"
 ```
+
+**After**
+
+```CSS
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
 navbar-col: "#F5F5F5"
@@ -65,13 +87,11 @@ footer-text-col: "#666666"
 footer-link-col: "#404040"
 ```
 
-Config.yml previously ```footer-text-col: "#777777"``` and previously ```link-col: "#008AFF"```
-
-may also update blog tags and theme-by and copyright-by text
+That's all the links for this website! You may have more or fewer CSS edits to make than shown here, but the process to edit them should be quick. Plus, these edits should only be necessary once, and all future HTML elements will pull from these same color schemes. 
 
 ## Alt-Text for Images 
 
-Added alt text to all  images to clear this up as well 
+This part is much simpler. For each image of your site, you simply need to set the `alt` parameter of the image. This should only take a few minutes and ideally will be become part of your routine. 
 
 # Analyzing the Results
 
@@ -87,4 +107,6 @@ This is where we will stop for today, but there will be future articles about im
 
 ## Further Reading
 <!-- Add more links -->
-https://ux.stackexchange.com/questions/57340/percentage-of-screen-readers-users-in-usa#:~:text=Someone%20wrote%20a%20very%20detailed%20article%20as%20to%20why.&text=So%2088.5%25%20of%20326%20million,cannot%20see%20but%20are%20online.
+[StackOverflow Page Regarding Percentage of Screen Reader Users in the US](https://ux.stackexchange.com/questions/57340/percentage-of-screen-readers-users-in-usa#:~:text=Someone%20wrote%20a%20very%20detailed%20article%20as%20to%20why.&text=So%2088.5%25%20of%20326%20million,cannot%20see%20but%20are%20online)
+[Google Developer's Page on Color Contrast](https://web.dev/color-contrast/)
+[W3's Library on High-Contrast Colors for Links](https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html)
