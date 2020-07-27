@@ -11,7 +11,7 @@
       	if (typeof jQuery == 'undefined') {
           <!-- document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>'); -->
           var newScript = document.createElement("script");
-          newScript.async = true;
+          newScript.async = false; <!-- set to false -->
           newScript.src = "{{ js | relative_url }}";
           var scriptZero = document.getElementsByTagName('script')[0];
           scriptZero.parentNode.insertBefore(newScript, scriptZero);
