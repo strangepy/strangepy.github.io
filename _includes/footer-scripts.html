@@ -6,11 +6,15 @@
 
 {% if layout.common-js %}
   {% for js in layout.common-js %}
-    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     {% if js contains 'jquery' %}
       <script>
       	if (typeof jQuery == 'undefined') {
-          document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>');
+          <!-- document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>'); -->
+          var newScript = document.createElement("script");
+          newScript.async = true;
+          newScript.src = "{{ js | relative_url }}";
+          var scriptZero = document.getElementsByTagName('script')[0];
+          scriptZero.parentNode.insertBefore(newScript, scriptZero);
       	}
       </script>
     {% else %}
