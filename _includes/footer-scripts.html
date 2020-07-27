@@ -13,8 +13,7 @@
           var newScript = document.createElement("script");
           newScript.async = false; <!-- set to false -->
           newScript.src = "{{ js | relative_url }}";
-          var scriptZero = document.getElementsByTagName('script')[0];
-          scriptZero.parentNode.insertBefore(newScript, scriptZero);
+          document.body.appendChild(newScript);
       	}
       </script>
     {% else %}
