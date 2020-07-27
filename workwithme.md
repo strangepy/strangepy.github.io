@@ -45,3 +45,6 @@ type: info
 </form>
 
 <!--<div style="font-size: 12px;">Please do not use this form to send me full code samples or ask me to fix an app for free. Due to the volume of questions I receive I unfortuantely cannot offer free support.</div> -->
+
+# Why the Name? 
+strangePy may seem like a bit of an unusual name choice. If you were wondering about that, there is a pretty simple explanation! I love using the editor PyCharm and I think it has a wonderful, whimsical name. Since I am a particle physicist at heart, the companion quark to "charm" is called "strange". Hence, my love for particle physics and my enjoyment of Python (both as a programming language and as a comedy troupe) were combined into the name "strangePy"! 
