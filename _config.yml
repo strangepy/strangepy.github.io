@@ -23,6 +23,7 @@ navbar-links:
   Blog: "/"
   Services: "services"
   Work With Me: "workwithme"
+  Skills: "software-skills"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
