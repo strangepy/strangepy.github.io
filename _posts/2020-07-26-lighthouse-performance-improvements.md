@@ -68,13 +68,13 @@ Unfortunately, this file is not quite as easy to solve. Font awesome provides ma
 Then if we look at the referenced `ext-css.html` file we can see:
 
 ```
-{% if include.css.sri %}
-<link href="{{ include.css.href }}" rel="stylesheet" integrity="{{ include.css.sri }}" crossorigin="anonymous">
-{% elsif include.css.href %}
-<link rel="stylesheet" href="{{ include.css.href }}" />
-{% else %}
-<link rel="stylesheet" href="{{ include.css }}" />
-{% endif %}
+{ % if include.css.sri % }
+<link href="{ { include.css.href } }" rel="stylesheet" integrity="{ { include.css.sri } }" crossorigin="anonymous">
+{ % elsif include.css.href % }
+<link rel="stylesheet" href="{ { include.css.href } }" />
+{ % else % }
+<link rel="stylesheet" href="{ { include.css } }" />
+{ % endif % }
 ```
 
 This will pull through the flat link to each CSS file. If we wanted to self-host the CSS file, then we may be able to add the `font-display: swap` parameter. However, image icons are not meant to be swapped out and display in the same manner as fonts. Zach Leatherman wrote an excellent [article about some of the issues with icon fonts](https://www.zachleat.com/web/font-display-icon-fonts/). The bottom line is that font icons are not recommended for web performance, and you may be better off switching to SVGs. This project is a bit more involved than today's article, so we are going to save this one for next time! 
