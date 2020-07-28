@@ -8,16 +8,15 @@ type: info
 My most commonly-requested services are listed below. I love working on new, challenging projects, so if you are interested in something not listed here, then please reach out to me and I would love to help (or find someone who can)!
 
 - [Apps](#native-apps)
-- Data Sets
-- Websites
-- Public Speaking
+- [Data](#data)
+- [Websites](#websites)
+- [Public Speaking](#public-speaking)
 
 # Native Apps
 - Creation of a hybrid native app based on your website. 
 - Monitoring and maintenance of the hybrid app in tandem with your deployment schedule. 
 
 # Data
-
 ## Data Analysis
 - Analysis of data sets, with a special interest in big data, using Python. 
 - Customized reports with analysis results using popular Python libraries. 
@@ -27,7 +26,6 @@ My most commonly-requested services are listed below. I love working on new, cha
 - Custom Extract, Transform, and Load (ETL) processes, with a speciality in complex SQL queries. 
 
 # Websites 
-
 ## Web Performance
 - Analyze the current performance of your top webpages. 
 - Provide recommendations on how to improve load times. 
@@ -39,7 +37,6 @@ My most commonly-requested services are listed below. I love working on new, cha
 - Recommendations on maintaining compliance with the new California Consumer Privacy Act (CCPA).
 
 # Automation
-
 ## Synthetic Tests
 - Write synthetic scripts to perform an automated test in Selenium or Katalon. 
 - Customized web scraping and reports using Selenium and Python. 
