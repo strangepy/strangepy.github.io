@@ -25,18 +25,18 @@ For the past three years, I have worked on a number of projects in JavaScript. A
 ## Python
 As someone who loves working with data, Python is an amazing programming language. For the past few years, I have been able to write some internal tools and selenium scripts using Python. The internal tools are often built to automate a particular task or data pull that is not available via an API. I also use Python to make API requests and then compile the data into a custom report for clients. 
 
-## HTML & CSS 
-I learned HTML & CSS to format legal documents for users to accept within a client's online portal. For over two years, I have worked in a consulting capacity to analyze a client's website for potential improvements to load order and browser-side rendering of HTML and CSS files. I also have spent hundreds of hours writing selenium scripts that interact with the HTML document. 
-
-## LaTeX
-For those of you nto familiar with LaTeX, it is a free software project for typesetting and text markup. I used it during my entire time at college to format laboratory papers in the same manner as the scientific journals. I used it weekly during my college studies and it makes writing physics equations in a paper almost trivially easy. If you have ever tried to write an equation in Microsoft Word using subscript and superscript, you should understand what I mean. 
-
 ## SQL
 I have 3+ years of experience heavily using SQL. Originally, I learned SQL at home so I could help a coworker with their Extract, Transform, and Load (ETL) responsibilities. That work included receiving a .dat file from a deprecated software system, and then running a variety of scripts to validate the data against a series of logical tests. Any failed checks (such as a stock being sold before it was purchased) would be manually resolved with the client and updated in the local database. Once the data had been verified and passed a final set of checks (all written in SQL), then the data would be carefully processed into the full database system. 
 
 I love pulling data from databases directly, and the process of scrubbing data before it is imported into a new system. Data validity is extremely important to me, and I have extensive experience with troubleshooting logical inconsistencies in database tables. For the past two years, I gained experience working with big data sets and ensuring queries will not be too taxing on the infrastructure. My knowledge also includes pulling customized data sets using inner selects, joins, and proper filtering with WHERE and HAVING clauses. 
 
-# Services & Tools
+## LaTeX
+For those of you not familiar with LaTeX, it is a free software project for typesetting and text markup. I used it during my entire time at college to format laboratory papers in the same manner as the scientific journals. I used it weekly during my college studies and it makes writing physics equations in a paper almost trivially easy. If you have ever tried to write an equation in Microsoft Word using subscript and superscript, you should understand what I mean. 
+
+## HTML & CSS 
+I originally learned HTML & CSS to format legal documents for users to accept within a client's online portal. For over two years, I have worked in a consulting capacity to analyze a client's website for potential improvements to load order and browser-side rendering of HTML and CSS files. I also have spent hundreds of hours writing selenium scripts that interact with the HTML document. 
+
+# Tools & Applications
 
 ## jMeter
 Every week for the past year (and counting), I run a custom jMeter crawl to open a pre-defined list of URLs and check each page against a list of banned terms. The output is separated into lists of inaccessible URLs (typically 400-level HTTP codes), URLs with page errors (the input data did not return proper results), and URLs with banned terms (including which banned terms were found and a custom code). 
@@ -48,18 +48,6 @@ I am familiar with multiple code versioning tools including, but not limited to:
 - Git & GitHub
 - SVN
 - Mercurial
-
-## Linux
-At home, a Linux distro is actually on nearly all of my devices. I most frequently use Ubuntu, but have tested out a few other distros for specific use cases. 
-
-# Unix
-As mentioned in the section for the C programming language, I have used Unix systems both in college studies and at an accelerator laboratory. 
-
-## Excel
-Sometimes, Excel is the tool of choice for a particular client or task. I can use vlookups, pivot tables, and have even written a few macros. I am often the person people come to when they need help doing something in Excel quickly. I have also helped clients automate certain Excel tasks such as: 
-* Formatting the output data of a JMeter crawl 
-* Running API requests and combining the results into tables 
-* Calculating pricing for an entire Saas platform
 
 ## Selenium
 Nearly all of my experience with selenium is in Python or in software systems built to run a specific set of selenium commands. Selenium is essential for automated web testing, and I have multiple years of experience working in it. I have spent hundreds of hours writing and troubleshooting selenium scripts. 
@@ -86,3 +74,24 @@ Postman is an essential tool for the consumption of API endpoints. It is quick t
 
 ## VirtualBox
 This has primarily been used for at-home projects, especially running a Linux flavor within a Windows desktop. VirtualBox is extremely useful and I found it easy to set up and use.
+
+## Excel
+Sometimes, Excel is the tool of choice for a particular client or task. I can use vlookups, pivot tables, and have even written a few macros. I am often the person people come to when they need help doing something in Excel quickly. I have also helped clients automate certain Excel tasks such as: 
+* Formatting the output data of a JMeter crawl 
+* Running API requests and combining the results into tables 
+* Calculating pricing for an entire Saas platform
+
+# Operating Systems
+
+
+## Linux
+At home, a Linux distro is actually on nearly all of my devices. I most frequently use Ubuntu, but have tested out a few other distros for specific use cases. 
+
+## Unix
+As mentioned in the section for the C programming language, I have used Unix systems both in college studies and at an accelerator laboratory. 
+
+## Windows
+I have used windows primarily on work computers and my laptop during college. I am extremely familiar with Windows, but I do prefer developing code on a Linux machine. 
+
+## MacOS
+A MacOS machine was my daily driver for about four years. I have limited experience with developing code on an Apple device. 
