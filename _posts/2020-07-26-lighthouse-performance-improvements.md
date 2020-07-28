@@ -55,7 +55,7 @@ Now that we know what to do, we can simply pull up the `base.html` file within t
 
 Unfortunately, this file is not quite as easy to solve. Font awesome provides many of the icons on the strangePy website, and as such this file is referenced within each layout. As an example, you can pull up `base.html` in the `_layouts` folder and you can see a reference to `head.html`. Within the `head.html` file, there is a reference to `common-ext-css` like shown below. 
 
-```
+```HTML
 { % if layout.common-ext-css % }
 { % for css in layout.common-ext-css % }
 { % include ext-css.html css=css % }
@@ -65,7 +65,7 @@ Unfortunately, this file is not quite as easy to solve. Font awesome provides ma
 
 Then if we look at the referenced `ext-css.html` file we can see:
 
-```
+```HTML
 { % if include.css.sri % }
 <link href="{ { include.css.href } }" rel="stylesheet" integrity="{ { include.css.sri } }" crossorigin="anonymous">
 { % elsif include.css.href % }
