@@ -9,11 +9,19 @@ tags: [web-performance, web-development]
 
 Today, we are going to take a second look at the web performance of the [strangePy website](https://strangepy.com) by using a [Google Lighthouse performance audit](https://web.dev/measure/). A few weeks ago, Google released [Lighthouse 6.0](https://web.dev/lighthouse-whats-new-6.0/) with a few updates. We may take an in-depth look at those updates in a future article, but today we are going to focus on some quick performance improvements to the website and hopefully get the performance and accessibility scores up to 100! 
 
-First off, let's take a look at the current performance. You can either use the [online auditor](https://web.dev/measure/) or open your browser's developer tools and click the "Audit" tab. For this analysis, we are going to focus on Desktop and save Mobile for another day. Taking a look at the screenshot of the high-level audit, the performance score is already at 99! 
+First off, let's take a look at the current performance. You can either use the [online auditor](https://web.dev/measure/) or open your browser's developer tools and click the "Audit" tab. For this analysis, we are going to focus on Desktop and save Mobile for another day. 
+
+### Before Today's Improvements
+
+Let's start off by taking a look at the current high-level scores produced by the Lighthouse auditor. The performance score is already at 99, but accessibility is currently at 90. 
 
 ![Lighthouse Overview Before Today's Changes](/img/lighthouse_performance_before.PNG "Lighthouse Overview Before Today's Changes")
 
-This is excellent, and it looks like the first recommendation is to properly size images. 
+### After Today's Improvements
+
+By the end of today's article, we will have improved both the performance and the accessibility score to 100! 
+
+![Lighthouse Overview After Today's Changes](/img/lighthouse_performance_after.PNG "Lighthouse Overview After Today's Changes")
 
 ## Properly Size Images
 
