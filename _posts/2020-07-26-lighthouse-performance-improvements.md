@@ -1,7 +1,7 @@
 ---
 date: 2020-07-26
-title: Lighthouse Performance Improvements, Part 2
-subtitle: Reaching 100 in Performance and Accessibility
+title: Fast Improvements to Your Site's Lighthouse Score
+subtitle: Part 2, Reaching a Score of 100
 image: /img/lighthouse-100-performance-score.PNG
 tags: [web-performance, web-development]
 
@@ -138,11 +138,11 @@ We covered quite a few things today, but don't forget to take things one piece a
 
 As always, software development is an iterative process and we did not cover everything today. There are quite a few recommendations left for next time, so keep an eye out for part three of this series! 
 
-### Serve Static Assets with an Efficient Cache Policy 
+#### Serve Static Assets with an Efficient Cache Policy 
 ![Lighthouse Recommendation to Improve Cache Policy](/img/lighthouse_performance_before_Cache.PNG "Lighthouse Recommendation to Improve Cache Policy")
 
-### Serve Images in Next-Gen Formats
+#### Serve Images in Next-Gen Formats
 ![Lighthouse Recommendation to Use Next-Gen Image Formats](/img/lighthouse_performance_before_Image_Format.PNG "Lighthouse Recommendation to Use Next-Gen Image Formats")
 
-### Remove JavaScript Libraries with Known Security Vulnerabilities
+#### Remove JavaScript Libraries with Known Security Vulnerabilities
 ![Lighthouse Recommendation to Remove Vulnerable JS Libraries](/img/lighthouse_performance_before_JS_Libraries.PNG "Lighthouse Recommendation to Remove Vulnerable JS Libraries")
