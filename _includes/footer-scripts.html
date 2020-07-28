@@ -1,21 +1,6 @@
 {% if layout.common-js %}
   {% for js in layout.common-js %}
       <script src="{{ js | relative_url }}"></script>
-    <!--
-    {% if js contains 'jquery' %}
-      <script>
-      	if (typeof jQuery == 'undefined') {
-          <!-- document.write('<script src="{{ js | relative_url }}"></scr' + 'ipt>'); --><!--
-          var newScript = document.createElement("script");
-          newScript.async = false; <!-- set to false --><!--
-          newScript.src = "{{ js | relative_url }}";
-          document.body.appendChild(newScript);
-      	}
-      </script>
-    {% else %}
-      <script src="{{ js | relative_url }}"></script>
-    {% endif %}
-    -->
   {% endfor %}
 {% endif %}
 
