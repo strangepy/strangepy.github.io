@@ -2,12 +2,14 @@
 date: 2020-07-26
 title: Lighthouse Performance Improvements, Part 2
 subtitle: Reaching 100 in Performance and Accessibility
-image: /img/lighthouse-100-performance-score.png
+image: /img/lighthouse-100-performance-score.PNG
 tags: [web-performance, web-development]
 
 ---
 Today, we are going to take a second look at the web performance of the [strangePy website](https://strangepy.com) by using a [Google Lighthouse performance audit](https://web.dev/measure/). A few weeks ago, Google released [Lighthouse 6.0](https://web.dev/lighthouse-whats-new-6.0/) with a few updates. We may take an in-depth look at those updates in a future article, but today we are going to focus on some quick performance improvements to the website and hopefully get the performance and accessibility scores up to 100! 
-First off, let's take a look at the current performance. You can either use the [online auditor](https://web.dev/measure/) or open your browser's developer tools and click the "Audit" tab. For this analysis, we are going to focus on Desktop and save Mobile for another day. Taking a look at the screenshot of the high-level audit, the performance score is already at 99! This is excellent, and it looks like the first recommendation is to properly size images. 
+First off, let's take a look at the current performance. You can either use the [online auditor](https://web.dev/measure/) or open your browser's developer tools and click the "Audit" tab. For this analysis, we are going to focus on Desktop and save Mobile for another day. Taking a look at the screenshot of the high-level audit, the performance score is already at 99! 
+![Lighthouse Overview Before Today's Changes](/img/lighthouse_performance_before.PNG "Lighthouse Overview Before Today's Changes")
+This is excellent, and it looks like the first recommendation is to properly size images. 
 
 ## Properly Size Images
 This optimization refers to when the downloaded size of an image is significantly larger (4 KiB) than the rendered size of the image. This leads to transferring larger file sizes across the network than is needed, and thus can slow down your web page. You can find a [full explanation here](https://web.dev/uses-responsive-images/). There are three common ways to solve this problem. 
