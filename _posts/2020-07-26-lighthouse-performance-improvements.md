@@ -142,7 +142,7 @@ As always, software development is an iterative process and we did not cover eve
 ![Lighthouse Recommendation to Improve Cache Policy](/img/lighthouse_performance_before_Cache.PNG "Lighthouse Recommendation to Improve Cache Policy")
 
 ### Serve Images in Next-Gen Formats
-![Lighthouse Recommendation to Use Next-Gen Image Formats](/img/lighthouse_performance_before_Image_Forma.PNG "Lighthouse Recommendation to Use Next-Gen Image Formats")
+![Lighthouse Recommendation to Use Next-Gen Image Formats](/img/lighthouse_performance_before_Image_Format.PNG "Lighthouse Recommendation to Use Next-Gen Image Formats")
 
 ### Remove JavaScript Libraries with Known Security Vulnerabilities
 ![Lighthouse Recommendation to Remove Vulnerable JS Libraries](/img/lighthouse_performance_before_JS_Libraries.PNG "Lighthouse Recommendation to Remove Vulnerable JS Libraries")
