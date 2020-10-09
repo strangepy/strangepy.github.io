@@ -73,7 +73,7 @@ telephone:
   
 privacy-policy:
   name: "Privacy Policy"
-  baseURL: "https://www.strangepy.com/privacy-policy"
+  baseURL: "https://www.strangepy.com/"
   icon: "fa-passport"
 
 rss:
