@@ -70,6 +70,11 @@ telephone:
   name: "Phone"
   baseURL: "tel:"
   icon: "fa-phone"
+  
+privacy-policy:
+  name: "Privacy Policy"
+  baseURL: "https://www.strangepy.com/privacy-policy"
+  icon: "fa-passport"
 
 rss:
   name: "RSS"
