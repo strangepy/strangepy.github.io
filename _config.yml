@@ -1,7 +1,7 @@
 # --- General options --- #
 
 # Name of website
-title: strangePy
+title: strangePy Solutions
 
 # Short description of your site
 description: Consulting & Development
@@ -21,7 +21,7 @@ baseurl: ""
 # List of links in the navigation bar
 navbar-links:
   Blog: "/"
-  Skills: "software-skills"
+  # Skills: "software-skills"
   Services: "services"
   Work With Me: "workwithme"
 #  Resources:
