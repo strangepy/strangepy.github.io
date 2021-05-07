@@ -20,7 +20,7 @@ baseurl: ""
 
 # List of links in the navigation bar
 navbar-links:
-  Blog: "/"
+  # Blog: "/"
   # Skills: "software-skills"
   Services: "services"
   Work With Me: "workwithme"
