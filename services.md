@@ -7,52 +7,61 @@ type: info
 
 My most commonly requested services are listed below. I love working on new, challenging projects, so if you are interested in something not listed here, then <a href="https://www.strangepy.com/workwithme/#contact-me" target="_blank" >please reach out to me</a> and I would love to help (or find someone who can)!
 
+<br>
+<br>
 
 # Automated Reports & Processes
 
-## Executive Reports 
+### Executive Reports 
 - Customized PowerPoint reports with charts, callouts, and high-level notes that are perfect for executives.
 - Combine data from multiple providers and across all of your domains for a high-level summary. 
 
-## Data Analysis
-- Fully customized reports in your preferred format with data analysis resuults. 
+### Data Analysis
+- Fully customized reports in your preferred format with data analysis results. 
 - Includes error-checking and combining data from numerous database tables. 
 
-## Phrase Audit
+### Phrase Audit
 - Dynamically checking each page of your website for banned / unauthorized words.
 - Includes adult content, outdated phrases (such as a previous CEO's name), and competitor names. 
 
+<br>
+<br>
 
 # Legal Compliance Audits 
 
-## California Consumer Privacy Act (CCPA)
+### California Consumer Privacy Act (CCPA)
 - Dynamically checking each page on your website for high-level CCPA compliance. 
 - Includes validation of cookie consent and tracking information.
 
-## Legal Agreements
+### Legal Agreements
 - Dynamically auditing each page on your website for links to legal documents. 
 - Includes privacy policies, non-disclosure agreements, and terms & conditions documents.
 
-## General Data Protection Regulation (GDPR)
+### General Data Protection Regulation (GDPR)
 - Dynamically checking each page on your website for high-level GDPR compliance. 
 - Includes validation of cookie consent and tracking information.
 
+<br>
+<br>
+
 # Security Compliance Audits 
 
-## Content Security Policy (CSP) 
+### Content Security Policy (CSP) 
 - Dynamically auditing each page on your website for a valid CSP. 
 - Assistance with creating, implementing, or managing your Content Security Policy (CSP). 
 
+<br>
+<br>
 
 # Data
 
-## Data Analysis
+### Data Analysis
 - Analysis of data sets, with a special interest in big data, using Python. 
 - Customized reports with analysis results including charts. 
 
-## Big Data, Queries, and ETL
+### Big Data, Queries, and ETL
 - Ingestion of data from multiple sources, including disparate APIs and databases. 
-- Custom Extract, Transform, and Load (ETL) processes, with a speciality in complex SQL queries. 
+- Custom Extract, Transform, and Load (ETL) processes, with a specialty in complex SQL queries. 
 
 <!---
 - [Apps](#native-apps)
