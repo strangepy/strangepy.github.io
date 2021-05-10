@@ -14,15 +14,15 @@ type: info
       <input type="text" name="name" class="form-control input-lg" placeholder="Name" title="Name">
     </div>
     <div class="col-xs-6">
-      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" title="Email">
+      <input type="email" name="_replyto" class="form-control input-lg" placeholder="Email Address" title="Email" required="required">
     </div>
   </div>
   <!--<input type="number" name="budget" class="form-control input-lg" placeholder="Estimated Budget (if applicable)" title="Budget">-->
   <input type="hidden" name="_subject" value="New submission from strangepy.com">
   <textarea type="text" name="content" class="form-control input-lg" placeholder="Please enter a brief description of how I can help you!" title="Message" required="required" rows="3"></textarea>
-  <input type="text" name="drink" class="form-control input-lg" placeholder="What is your favourite kind of tea/beverage?"></input>
+  <input type="text" name="tea" class="form-control input-lg" placeholder="What is your favourite kind of tea/beverage?" title="Tea">
   <input type="text" name="_gotcha" style="display:none">
-  <input type="hidden" name="_next" value="?message=Your message was sent successfully, thank you! I will get back to you as soon as possible!" />
+  <input type="hidden" name="_next" value="?message=Your message was sent successfully, thank you! I will get back to you as soon as possible!">
   <button type="submit" class="btn btn-lg btn-primary">Submit</button>
 </form>
 
