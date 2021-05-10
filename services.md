@@ -5,7 +5,7 @@ subtitle: Automation / Data Analysis / Web Performance
 type: info
 ---
 
-My most commonly requested services are listed below. I love working on new, challenging projects, so if you are interested in something not listed here, then <a href="https://www.strangepy.com/workwithme/#contact-me" target="_blank" >please reach out to me</a> and I would love to help (or find someone who can)!
+My most commonly requested services are listed below. I love working on new, challenging projects, so if you are interested in something not listed here, then <a href="https://www.strangepy.com/workwithme/" target="_blank" >please reach out to me</a> and I would love to help (or find someone who can)!
 
 <br>
 <br>
