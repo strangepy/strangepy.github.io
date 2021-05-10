@@ -22,8 +22,9 @@ baseurl: ""
 navbar-links:
   # Blog: "/"
   # Skills: "software-skills"
+  About: "about"
   Services: "services"
-  Work With Me: "workwithme"
+  Contact: "workwithme"
 #  Resources:
 #    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
 #    - Learn markdown: "http://www.markdowntutorial.com/"
